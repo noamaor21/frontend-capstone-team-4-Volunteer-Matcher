@@ -24,3 +24,10 @@ body {
     position: fixed;
     width: 100%;
 }
+
+.nav-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
