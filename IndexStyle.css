@@ -1,0 +1,8 @@
+body {
+    direction: rtl; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #defef3;
+    color: #333;
+}
