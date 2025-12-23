@@ -6,3 +6,12 @@ body {
     background-color: #defef3;
     color: #333;
 }
+
+#beggining {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                      url('https://images.globes.co.il/images/NewGlobes/big_image_800/2019/F9849A6B17CDFCA053B13FA038BA269F_800x392.20190814T175815.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    
+} 
