@@ -1,13 +1,20 @@
 body{
-    background-color: aqua;
+    background-color: rgb(0, 255, 229);
     font-family: Arial, Helvetica, sans-serif; 
     color: black;
     line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+}
 
+.section-container{
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+}
 
-
-
-
-
+.subtitle {
+    margin-bottom: 30px;
+    color: #555;
+    
 
 }
