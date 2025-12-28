@@ -79,3 +79,39 @@ body {
     }
 }
 
+.site-header {
+    display: flex;
+    direction: rtl;
+    background-color: rgb(193, 192, 205);
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    
+}
+
+
+.nav-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap:30px;
+    margin: 30px;
+}
+
+
+.logo-img {
+     height: 120px; 
+}
+
+.NameOfProject {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+}
