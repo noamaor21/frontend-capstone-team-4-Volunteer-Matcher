@@ -5,6 +5,7 @@ body {
     line-height: 1.5;
     background-color: #defef3;
     color: #333;
+    font-family: 'Assistant', sans-serif;
 }
 
 
@@ -22,8 +23,7 @@ body {
 }
 
 .OpeningWelcome {
-    font-size: 60px;
-    font-weight: 10000;
+    font-size: 80px;
 }
 
 .hero-buttons {
@@ -38,7 +38,7 @@ body {
     padding-right: 18px;
     padding-bottom: 10px;
     padding-top: 10px;
-    font-size: 1.2rem;   
+    font-size: 1.6rem;   
     font-weight: bold;
     border-radius: 10px;
     background-color: rgb(74, 74, 202);
@@ -54,6 +54,7 @@ body {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 
 .nav-list{
@@ -86,30 +87,27 @@ body {
     background: white;
     padding: 30px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 30px;
     border-top: 4px solid #356bff;
 }
+
 
 #process-title{
     padding-right: 20px;
 }
 
 h3 {
-font-size: 30px;
-margin-right: 20px;
-}
-
-h2{
-font-size: 20px;
+    font-size: 40px;
+    margin-right: 20px;
 }
 
 p{
-    font-size: 20px;
+    font-size: 30px;
     margin-right: 20px;
 }
 
 .openingParagraph{
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .audiences {
@@ -131,4 +129,7 @@ p{
     width: 450px;
     display: block;
 }
-
+h1, h2, h3, .OpeningWelcome {
+    font-family: 'Heebo', sans-serif; /* פונט ייעודי לכותרות */
+    font-weight: 700;
+}
