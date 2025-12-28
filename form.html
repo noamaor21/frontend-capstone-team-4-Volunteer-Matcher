@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הרשמה למתנדבים</title>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="form.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
 
     <div class="main-wrapper">
         <div class="form-card shadow">
-            <h2 class="title">טופס הרשמה</h2>
+            <h2 class="title">טופס הרשמה ל-Volunteer Matcher</h2>
             
             <form class="row g-3">
                 <div class="col-md-6">
@@ -22,43 +25,41 @@
                     <input type="text" class="form-control" placeholder="ישראל" required>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label">שם משפחה  *</label>
+                    <label class="form-label">שם משפחה *</label>
                     <input type="text" class="form-control" placeholder="ישראלי" required>
                 </div>
-                
 
                 <div class="col-md-6">
-                    <label class="form-label">כתובת מייל  *</label>
+                    <label class="form-label">כתובת מייל *</label>
                     <input type="email" class="form-control" placeholder="name@example.com" required>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label">סיסמא  *</label>
+                    <label class="form-label">סיסמה *</label>
                     <input type="password" class="form-control" required>
                 </div>
 
                 <div class="col-12 py-2">
-                <label class="form-label d-block">מין  *</label>
-                <div class="d-flex flex-wrap justify-content-start">
-                <div class="form-check form-check-inline ms-3">
-                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                <label class="form-check-label" for="male">זכר</label>
-                </div>
-                <div class="form-check form-check-inline ms-3">
-                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                <label class="form-check-label" for="female">נקבה</label>
-                </div>
-                <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gender" id="other" value="other">
-                 <label class="form-check-label" for="other">אחר</label>
-                </div>
-                </div>
+                    <label class="form-label d-block">מין *</label>
+                    <div class="d-flex flex-wrap justify-content-start">
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">זכר</label>
+                        </div>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">נקבה</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                            <label class="form-check-label" for="other">אחר</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-12">
                     <label class="form-label">כתובת מגורים</label>
-                    <input type="text" class="form-control" >
+                    <input type="text" class="form-control">
                 </div>
-                
                 <div class="col-md-8">
                     <label class="form-label">עיר</label>
                     <input type="text" class="form-control">
@@ -67,84 +68,76 @@
                     <label class="form-label">מיקוד</label>
                     <input type="text" class="form-control">
                 </div>
+
                 <div class="col-12 py-3 text-start"> 
-    <label class="form-label d-block fw-bold">באיזו פעילות תרצה/י להתנדב?</label>
-    
-    <div class="d-flex flex-wrap justify-content-start gap-3">
-        
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-elderly" value="elderly">
-            <label class="form-check-label" for="check-elderly">עזרה לקשישים</label>
-        </div>
+                    <label class="form-label d-block fw-bold">באיזו פעילות תרצה/י להתנדב?</label>
+                    <div class="d-flex flex-wrap justify-content-start gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-elderly" value="elderly">
+                            <label class="form-check-label" for="check-elderly">עזרה לקשישים</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-food" value="food">
+                            <label class="form-check-label" for="check-food">חלוקת מזון</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-youth" value="youth">
+                            <label class="form-check-label" for="check-youth">חונכות נוער</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-tutoring" value="tutoring">
+                            <label class="form-check-label" for="check-tutoring">שיעורים פרטיים</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-env" value="environment">
+                            <label class="form-check-label" for="check-env">איכות הסביבה</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-animals" value="animals">
+                            <label class="form-check-label" for="check-animals">סיוע לבעלי חיים</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-tech" value="tech">
+                            <label class="form-check-label" for="check-tech">תמיכה טכנולוגית</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check-admin" value="admin">
+                            <label class="form-check-label" for="check-admin">סיוע אדמיניסטרטיבי</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="else" value="else">
+                            <label class="form-check-label" for="else">אחר</label>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-food" value="food">
-            <label class="form-check-label" for="check-food">חלוקת מזון</label>
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-youth" value="youth">
-            <label class="form-check-label" for="check-youth">חונכות נוער</label>
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-tutoring" value="tutoring">
-            <label class="form-check-label" for="check-tutoring">שיעורים פרטיים</label>
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-env" value="environment">
-            <label class="form-check-label" for="check-env">איכות הסביבה</label>
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-animals" value="animals">
-            <label class="form-check-label" for="check-animals">סיוע לבעלי חיים</label>
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-tech" value="tech">
-            <label class="form-check-label" for="check-tech">תמיכה טכנולוגית</label>
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-admin" value="admin">
-            <label class="form-check-label" for="check-admin">סיוע אדמיניסטרטיבי</label>
-        </div>
-         <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="else" value="else">
-            <label class="form-check-label" for="else">אחר</label>
-        </div>
-</div>
                 <div class="col-12 py-3">
-    <label class="form-label d-block">זמינות</label>
-    
-    <div class="d-flex flex-wrap gap-2 justify-content-start">
-        
-        <input type="checkbox" class="btn-check" id="day-sun" autocomplete="off">
-        <label class="btn btn-outline-success" for="day-sun">ראשון</label>
+                    <label class="form-label d-block">זמינות</label>
+                    <div class="d-flex flex-wrap gap-2 justify-content-start">
+                        <input type="checkbox" class="btn-check" id="day-sun" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-sun">ראשון</label>
 
-        <input type="checkbox" class="btn-check" id="day-mon" autocomplete="off">
-        <label class="btn btn-outline-success" for="day-mon">שני</label>
+                        <input type="checkbox" class="btn-check" id="day-mon" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-mon">שני</label>
 
-        <input type="checkbox" class="btn-check" id="day-tue" autocomplete="off">
-        <label class="btn btn-outline-success" for="day-tue">שלישי</label>
+                        <input type="checkbox" class="btn-check" id="day-tue" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-tue">שלישי</label>
 
-        <input type="checkbox" class="btn-check" id="day-wed" autocomplete="off">
-        <label class="btn btn-outline-success" for="day-wed">רביעי</label>
+                        <input type="checkbox" class="btn-check" id="day-wed" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-wed">רביעי</label>
 
-        <input type="checkbox" class="btn-check" id="day-thu" autocomplete="off">
-        <label class="btn btn-outline-success" for="day-thu">חמישי</label>
+                        <input type="checkbox" class="btn-check" id="day-thu" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-thu">חמישי</label>
 
-        <input type="checkbox" class="btn-check" id="day-fri" autocomplete="off">
-        <label class="btn btn-outline-success" for="day-fri">שישי</label>
+                        <input type="checkbox" class="btn-check" id="day-fri" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-fri">שישי</label>
 
-        <input type="checkbox" class="btn-check" id="day-sat" autocomplete="off">
-        <label class="btn btn-outline-success" for="day-sat">שבת</label>
-        
-    </div>
-</div>
-                <div class="col-12 mt-4">
+                        <input type="checkbox" class="btn-check" id="day-sat" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-sat">שבת</label>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-4 text-center">
                     <button type="submit" class="submit-btn">הירשם עכשיו</button>
                 </div>
             </form>
