@@ -4,32 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הרשמה למתנדבים</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
 
     <div class="main-wrapper">
         <div class="form-card shadow">
-            <h2 class="title">התחברות</h2>
+            <h2 class="title">הירשמות</h2>
             
             <form class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label">שם פרטי</label>
-                    <input type="text" class="form-control" placeholder="ישראל">
+                    <label class="form-label">שם פרטי *</label>
+                    <input type="text" class="form-control" placeholder="ישראל" required>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label">שם משפחה</label>
-                    <input type="text" class="form-control" placeholder="ישראלי">
+                    <label class="form-label">שם משפחה  *</label>
+                    <input type="text" class="form-control" placeholder="ישראלי" required>
                 </div>
+                
 
                 <div class="col-md-6">
-                    <label class="form-label">כתובת מייל</label>
-                    <input type="email" class="form-control" placeholder="name@example.com">
+                    <label class="form-label">כתובת מייל  *</label>
+                    <input type="email" class="form-control" placeholder="name@example.com" required>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label">סיסמא</label>
-                    <input type="password" class="form-control">
+                    <label class="form-label">סיסמא  *</label>
+                    <input type="password" class="form-control" required>
+                </div>
+
+                <div class="col-12 py-2">
+                <label class="form-label d-block">מין  *</label>
+                <div class="d-flex flex-wrap justify-content-start">
+                <div class="form-check form-check-inline ms-3">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="male">זכר</label>
+                </div>
+                <div class="form-check form-check-inline ms-3">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">נקבה</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                 <label class="form-check-label" for="other">אחר</label>
+                </div>
+                </div>
                 </div>
 
                 <div class="col-12">
@@ -47,7 +66,7 @@
                 </div>
 
                 <div class="col-12 mt-4">
-                    <button type="submit" class="submit-btn">Register Now</button>
+                    <button type="submit" class="submit-btn">הירשם עכשיו</button>
                 </div>
             </form>
         </div>
