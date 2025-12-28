@@ -15,6 +15,7 @@ body {
     padding: 40px;
     border-radius: 16px;
     width: 45%;  
+    animation: fadeInUp 1.8s ease-out; 
 }
 
 .title {
@@ -67,3 +68,14 @@ body {
         width: 95%; 
     }
 }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
