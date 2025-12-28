@@ -1,10 +1,12 @@
 body{
-    background-color: rgb(150, 237, 228);
+    background-color: rgb(213, 224, 237);
     font-family: Arial, Helvetica, sans-serif; 
     color: black;
     line-height: 1.6;
     margin: 0;
     padding: 40px;
+    direction: rtl;
+    text-align: right;
 }
 
 .section-container{
@@ -12,22 +14,61 @@ body{
     margin: 0 auto 80px auto;
 }
 
-.subtitle {
-    margin-bottom: 30px;
+.main-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: #555;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
 }
 
 .success-grid{
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .success-card {
-    background-color: rgb(126, 160, 156);
+    background-color: rgb(192, 214, 239);
     padding: 25px;
     border-radius: 10px;
     flex: 1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.10);
+}
 
+.success-card h3 {
+    margin-top: 0;
+    color: #3f51b5;
+    font-size: 1.4rem;
+}
+
+.frq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 50px;
+}
+
+.frq-item {
+    border-right: 6px solid #00041e;
+    padding-right: 25px;
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 20px;
 }
