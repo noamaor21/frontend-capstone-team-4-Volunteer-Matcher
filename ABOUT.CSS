@@ -75,5 +75,31 @@ h1, h2, h3, .section-title, .contact-main-title {
 .faq-box h3 {
     margin-top: 0;
     font-size: 1.25rem;
-    color: #222;
+    color: black;
+}
+
+.contact-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.contact-info {
+    flex-grow: 1;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-img-container {
+    flex: 0.8;
+}
+
+.contact-img-container img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
