@@ -14,3 +14,25 @@ h1, h2, h3, .section-title, .contact-main-title {
     font-weight: 700;
     color: #1a1a1a;
 }
+
+.page-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    border-bottom: 1px solid #eee; 
+}
+
+.page-section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
