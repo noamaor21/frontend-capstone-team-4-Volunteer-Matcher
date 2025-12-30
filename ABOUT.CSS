@@ -2,24 +2,24 @@ body {
     font-family: 'Assistant', sans-serif;
     direction: rtl;
     text-align: right;
-    background-color: #fdfaf7;
+    background-color:#F4E2DE;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
+    color: #025259;
 }
 
 h1, h2, h3, .section-title, .contact-main-title {
     font-family: 'Heebo', sans-serif; 
     font-weight: 700;
-    color: #1a1a1a;
+    color: #025259;
 }
 
 .page-section {
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 20px;
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid rgba(2, 82, 89, 0.1); 
 }
 
 .page-section:last-of-type {
@@ -44,7 +44,7 @@ h1, h2, h3, .section-title, .contact-main-title {
 }
 
 .story-card {
-    background-color: #E6E6FA; 
+    background-color:#025259; 
     padding: 25px;
     border-radius: 12px;
     flex: 1;
@@ -54,7 +54,11 @@ h1, h2, h3, .section-title, .contact-main-title {
 
 .story-card h3 {
     margin-top: 0;
-    color: #3145b5;
+    color: #F29325;
+}
+
+.story-card {
+    color: #F4E2DE ;
 }
 
 .questions-grid {
@@ -66,7 +70,7 @@ h1, h2, h3, .section-title, .contact-main-title {
 .faq-box {
     background-color: #fff;
     border: 1px solid #e0e0e0;
-    border-right: 6px solid #3f51b5; 
+    border-right: 6px solid #D94F04; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.03);
@@ -83,10 +87,11 @@ h1, h2, h3, .section-title, .contact-main-title {
     align-items: center;
     justify-content: space-between;
     gap: 50px;
+    width: 100%
 }
 
 .contact-info {
-    flex-grow: 1;
+    flex: 1;
 }
 
 .contact-text {
@@ -96,12 +101,12 @@ h1, h2, h3, .section-title, .contact-main-title {
 
 .contact-img-container {
     flex: 0.8;
+    
 }
 
 .contact-img-container img {
     max-width: 100%;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .button-group {
@@ -110,7 +115,7 @@ h1, h2, h3, .section-title, .contact-main-title {
 }
 
 .primary-button {
-    background-color: #3f51b5;
+    background-color:#F29325;
     color: white;
     border: none;
     padding: 12px 35px;
@@ -123,8 +128,8 @@ h1, h2, h3, .section-title, .contact-main-title {
 
 .secondary-button {
     background-color: transparent;
-    color: #3f51b5;
-    border: 2px solid #3f51b5;
+    color: #025259;
+    border: 2px solid #025259;
     padding: 12px 35px;
     border-radius: 50px;
     font-family: 'Heebo', sans-serif;
@@ -134,10 +139,12 @@ h1, h2, h3, .section-title, .contact-main-title {
 }
 
 .primary-button:hover {
-    background-color: #3f51b5;
+    background-color: #D94F04;
     opacity: 0.9;
 }
 
 .secondary-button:hover {
-    background-color: #fef0ff;
+    background-color: #007172;
+    color: #F4E2DE;
+    border-color: #007172;
 }
