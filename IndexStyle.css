@@ -8,10 +8,9 @@ body {
     font-family: 'Assistant', sans-serif;
 }
 
-
 #beggining { 
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
-                      url('https://images.globes.co.il/images/NewGlobes/big_image_800/2019/F9849A6B17CDFCA053B13FA038BA269F_800x392.20190814T175815.jpg');
+    url('https://images.globes.co.il/images/NewGlobes/big_image_800/2019/F9849A6B17CDFCA053B13FA038BA269F_800x392.20190814T175815.jpg');
     background-size: cover;
     padding: 80px 0;
     padding-top: 130px;
@@ -45,7 +44,7 @@ body {
     color:white
 }
 
-.site-header {
+/* .site-header {
     display: flex;
     direction: rtl;
     background-color: rgb(193, 192, 205);
@@ -66,6 +65,18 @@ body {
     gap:30px;
     margin: 30px;
 }
+
+.nav-list li a {
+    text-decoration: none;    
+    color: black;            
+    padding: 10px 20px;      
+    display: block;          
+}
+
+.nav-list li a:hover {
+    background-color: rgb(182, 181, 193); 
+} */
+
 
 .about-div {
     display: grid;
@@ -129,20 +140,116 @@ p{
     width: 450px;
     display: block;
 }
+
 h1, h2, h3, .OpeningWelcome {
     font-family: 'Heebo', sans-serif; 
     font-weight: 700;
 }
 
-.logo-img {
-     height: 120px; 
+
+.site-header {
+    background: white;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .NameOfProject {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    font-size: 20px;
+.logo-img { height: 80px; }
+.logo { font-size: 22px; }
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap; 
+    list-style: none;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* --- 1. טאבלטים (עד 1024px) --- */
+@media (max-width: 1024px) {
+    body { 
+        background-color: aqua;}
+    .nav-list {
+        gap: 15px; /* מצמצם רווחים כדי שהכל יכנס בשורה אחת */
+    }
+    .logo {
+        font-size: 1.5rem; /* מקטין מעט את שם האתר */
+    }
+}
+
+/* --- 2. טאבלטים קטנים ומובייל (עד 768px) --- */
+@media (max-width: 768px) {
+
+     body { 
+        background-color: rgb(136, 255, 0);}
+
+
+    .site-header {
+        flex-direction: column; /* הלוגו יהיה מעל התפריט */
+        height: auto;           /* מאפשר ל-Header לגדול עם התוכן */
+        padding: 15px 0;
+    }
+
+    .NameOfProject {
+        margin-bottom: 15px;    /* רווח בין הלוגו לקישורים שמתחתיו */
+        justify-content: center;
+    }
+
+    .nav-list {
+        flex-direction: row;    /* משאיר את הקישורים בשורה */
+        flex-wrap: wrap;        /* אם אין מקום, הם ירדו שורה בצורה מסודרת */
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .nav-list li a {
+        font-size: 15px;        /* פונט קטן יותר שמתאים למסך צר */
+        padding: 5px 8px;
+    }
+}
+
+/* --- 3. סמארטפונים (עד 480px) --- */
+@media (max-width: 480px) {
+ body { 
+        background-color: rgb(255, 0, 136);}
+
+    .nav-list {
+        gap: 5px;               /* מינימום רווח במובייל צפוף */
+    }
+    
+    .nav-list li a {
+        font-size: 13px;        /* הקטנה נוספת כדי למנוע חיתוך */
+    }
+
+    .OpeningWelcome {
+        font-size: 32px;        /* הכותרת לא תצא מגבולות המסך */
+        margin-top: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* כפתורים אחד מעל השני במובייל */
+        gap: 10px;
+    }
 }
