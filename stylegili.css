@@ -58,3 +58,156 @@ body {
 }
 
 
+
+.opportunities-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.opportunities-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.role-instruction {
+    font-size: 18px;      
+    font-weight: bold;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    background: white;
+    border: 1px solid #bfaee3;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: right;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+.card-side {
+    background-color: #e2e0f2;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #bfaee3;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 22px;
+}
+
+.card-content ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.quote {
+    font-style: italic;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #5261bc;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+}
+
+.btn:hover {
+    background-color: #404b9e;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        padding: 0 30px;
+    }
+
+    .image-window {
+        height: 400px; 
+    }
+
+    .main-title {
+        font-size: 3em;
+    }
+
+    .opportunities-header h2 {
+        font-size: 2.2em;
+    }
+    
+    .card {
+        gap: 20px; 
+    }
+}
+
+
+
+@media (max-width: 768px) 
+{
+    .image-window {
+        height: 300px;
+    }
+
+    .movable-img {
+        top: -50px; 
+        min-height: 300px;
+    }
+
+    .main-title {
+        font-size: 2.5em;
+    }
+
+    .opportunities-header h2 {
+        font-size: 2em;
+    }
+
+    .card {
+        grid-template-columns: 60px 1fr; 
+    }
+
+    .card-side {
+        font-size: 20px; 
+    }
+
+    .btn {
+        width: 100%; 
+        float: none;
+        text-align: center;
+    }
+}
+
+
+
