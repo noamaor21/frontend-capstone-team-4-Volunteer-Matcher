@@ -47,7 +47,8 @@
                 </div>
                 <div class="col-md-6">
                     <label for="password" class="form-label">סיסמה *</label>
-                    <input type="password" id="password" name="password" class="form-control" required aria-required="true">
+                    <input type="password" id="password" name="password" class="form-control" pattern=".{8,}" 
+                    title="הסיסמה חייבת להכיל לפחות 8 תווים" required aria-required="true">
                 </div>
 
                 <div class="col-12 py-2">
