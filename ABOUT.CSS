@@ -9,3 +9,8 @@ body {
     color: #333;
 }
 
+h1, h2, h3, .section-title, .contact-main-title {
+    font-family: 'Heebo', sans-serif; 
+    font-weight: 700;
+    color: #1a1a1a;
+}
