@@ -11,26 +11,28 @@
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
-<header id="site-header" class="site-header">
+</header> id="site-header" class="site-header">
         <div class="NameOfProject" id="Volunteer">
-            <img src="./logo2.png" alt="Volunteer Matcher Logo" class="logo-img">
-            <h1 class="logo">Volunteer Matcher</h1>
+        <img src="logo1.png" alt="Volunteer Matcher Logo" class="logo-img">
+        
+        <h1 class="logo">Volunteer Matcher</h1>
         </div>
-        <nav id="primary-nav" class="nav" aria-label="תפריט ראשי">
-            <ul class="nav-list">
+        <nav id="primary-nav" class="nav">
+            <ul class="nav-list"> 
+                <li><a href="#">הרשמה</a></li>
                 <li><a href="#">דף הבית</a></li>
                 <li><a href="#">חיפוש התנדבויות</a></li>
                 <li><a href="#">עלינו</a></li>
                 <li><a href="#">עמותת ״יד לקשיש״</a></li>
-                <li><a href="#">כניסה לאיזור האישי</a></li>
                 <li><a href="#">איזור אישי</a></li>
+               
             </ul>
         </nav>
 </header>
     <div class="main-wrapper">
         <main class="form-card shadow">
             <h2 class="title">טופס הרשמה ל-Volunteer Matcher</h2>
-            
+    
             <form class="row g-3" method="POST" action="#">
                 <div class="col-md-6">
                     <label for="first-name" class="form-label">שם פרטי *</label>
@@ -51,25 +53,22 @@
                     title="הסיסמה חייבת להכיל לפחות 8 תווים" required aria-required="true">
                 </div>
 
-                <div class="col-12 py-2">
-                    <fieldset>
-                        <legend class="form-label d-block" style="font-size: 1rem;">מין *</legend>
-                        <div class="d-flex flex-wrap justify-content-start">
-                            <div class="form-check form-check-inline ms-3">
-                                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                                <label class="form-check-label" for="male">זכר</label>
-                            </div>
-                            <div class="form-check form-check-inline ms-3">
-                                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                                <label class="form-check-label" for="female">נקבה</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="other" value="other">
-                                <label class="form-check-label" for="other">אחר</label>
-                            </div>
+                <fieldset class="col-12 py-2">
+                    <legend class="form-label d-block" style="font-size: 1rem;">מין *</legend>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">זכר</label>
                         </div>
-                    </fieldset>
-                </div>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">נקבה</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                            <label class="form-check-label" for="other">אחר</label>
+                        </div>
+                </fieldset>
+                
 
                 <div class="col-12">
                     <label for="address" class="form-label">כתובת מגורים</label>
@@ -84,77 +83,77 @@
                     <input type="text" id="zipcode" name="zipcode" class="form-control">
                 </div>
 
-                <div class="col-12 py-3 text-start"> 
-                    <fieldset>
-                        <legend class="form-label d-block fw-bold" style="font-size: 1rem;">באיזו פעילות תרצה/י להתנדב?</legend>
-                        <div class="d-flex flex-wrap justify-content-start gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-elderly" value="elderly">
-                                <label class="form-check-label" for="check-elderly">עזרה לקשישים</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-food" value="food">
-                                <label class="form-check-label" for="check-food">חלוקת מזון</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-youth" value="youth">
-                                <label class="form-check-label" for="check-youth">חונכות נוער</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-tutoring" value="tutoring">
-                                <label class="form-check-label" for="check-tutoring">שיעורים פרטיים</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-env" value="environment">
-                                <label class="form-check-label" for="check-env">איכות הסביבה</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-animals" value="animals">
-                                <label class="form-check-label" for="check-animals">סיוע לבעלי חיים</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-tech" value="tech">
-                                <label class="form-check-label" for="check-tech">תמיכה טכנולוגית</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="check-admin" value="admin">
-                                <label class="form-check-label" for="check-admin">סיוע אדמיניסטרטיבי</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="activities[]" id="else" value="else">
-                                <label class="form-check-label" for="else">אחר</label>
-                            </div>
+                 
+                <fieldset class="col-12 py-3 text-start">
+                    <legend class="form-label d-block fw-bold" style="font-size: 1rem;">באיזו פעילות תרצה/י להתנדב?</legend>
+                    <div class="d-flex flex-wrap justify-content-start gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-elderly" value="elderly">
+                            <label class="form-check-label" for="check-elderly">עזרה לקשישים</label>
                         </div>
-                    </fieldset>
-                </div>
-
-                <div class="col-12 py-3">
-                    <fieldset>
-                        <legend class="form-label d-block" style="font-size: 1rem;">זמינות</legend>
-                        <div class="d-flex flex-wrap gap-2 justify-content-start">
-                            <input type="checkbox" class="btn-check" name="availability[]" id="day-sun" value="sun" autocomplete="off">
-                            <label class="btn btn-outline-success" for="day-sun">ראשון</label>
-
-                            <input type="checkbox" class="btn-check" name="availability[]" id="day-mon" value="mon" autocomplete="off">
-                            <label class="btn btn-outline-success" for="day-mon">שני</label>
-
-                            <input type="checkbox" class="btn-check" name="availability[]" id="day-tue" value="tue" autocomplete="off">
-                            <label class="btn btn-outline-success" for="day-tue">שלישי</label>
-
-                            <input type="checkbox" class="btn-check" name="availability[]" id="day-wed" value="wed" autocomplete="off">
-                            <label class="btn btn-outline-success" for="day-wed">רביעי</label>
-
-                            <input type="checkbox" class="btn-check" name="availability[]" id="day-thu" value="thu" autocomplete="off">
-                            <label class="btn btn-outline-success" for="day-thu">חמישי</label>
-
-                            <input type="checkbox" class="btn-check" name="availability[]" id="day-fri" value="fri" autocomplete="off">
-                            <label class="btn btn-outline-success" for="day-fri">שישי</label>
-
-                            <input type="checkbox" class="btn-check" name="availability[]" id="day-sat" value="sat" autocomplete="off">
-                            <label class="btn btn-outline-success" for="day-sat">שבת</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-food" value="food">
+                            <label class="form-check-label" for="check-food">חלוקת מזון</label>
                         </div>
-                    </fieldset>
-                </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-youth" value="youth">
+                            <label class="form-check-label" for="check-youth">חונכות נוער</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-tutoring" value="tutoring">
+                            <label class="form-check-label" for="check-tutoring">שיעורים פרטיים</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-env" value="environment">
+                            <label class="form-check-label" for="check-env">איכות הסביבה</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-animals" value="animals">
+                            <label class="form-check-label" for="check-animals">סיוע לבעלי חיים</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-tech" value="tech">
+                            <label class="form-check-label" for="check-tech">תמיכה טכנולוגית</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="check-admin" value="admin">
+                            <label class="form-check-label" for="check-admin">סיוע אדמיניסטרטיבי</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="activities[]" id="else" value="else">
+                            <label class="form-check-label" for="else">אחר</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+
+                
+                <fieldset class="col-12 py-3">
+                    <legend class="form-label d-block" style="font-size: 1rem;">זמינות</legend>
+                    <div class="d-flex flex-wrap gap-2 justify-content-start">
+                        <input type="checkbox" class="btn-check" name="availability[]" id="day-sun" value="sun" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-sun">ראשון</label>
+
+                        <input type="checkbox" class="btn-check" name="availability[]" id="day-mon" value="mon" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-mon">שני</label>
+
+                        <input type="checkbox" class="btn-check" name="availability[]" id="day-tue" value="tue" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-tue">שלישי</label>
+
+                        <input type="checkbox" class="btn-check" name="availability[]" id="day-wed" value="wed" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-wed">רביעי</label>
+
+                        <input type="checkbox" class="btn-check" name="availability[]" id="day-thu" value="thu" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-thu">חמישי</label>
+
+                        <input type="checkbox" class="btn-check" name="availability[]" id="day-fri" value="fri" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-fri">שישי</label>
+
+                        <input type="checkbox" class="btn-check" name="availability[]" id="day-sat" value="sat" autocomplete="off">
+                        <label class="btn btn-outline-success" for="day-sat">שבת</label>
+                    </div>
+                </fieldset>
+                
 
                 <div class="col-12 mt-4 text-center">
                     <button type="submit" class="submit-btn">הירשם עכשיו</button>
