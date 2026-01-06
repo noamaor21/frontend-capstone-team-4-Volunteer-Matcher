@@ -4,7 +4,7 @@ body {
     padding: 0;
     line-height: 1.5;
     background-color:white;
-    color: #333;
+    color: black;
     font-family: 'Assistant', sans-serif;
 }
 
@@ -16,6 +16,11 @@ body {
     padding-top: 130px;
 } 
 
+.hamburger {
+  display: none; 
+  background: none;
+  border: none;}
+
 #welcome{
     text-align: center;
     padding: 20px;
@@ -23,6 +28,10 @@ body {
 
 .OpeningWelcome {
     font-size: 80px;
+}
+
+.openingParagraph {
+    padding-right: 0px;
 }
 
 .hero-buttons {
@@ -44,49 +53,13 @@ body {
     color:white
 }
 
-/* .site-header {
-    display: flex;
-    direction: rtl;
-    background-color: rgb(193, 192, 205);
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 20px;
-    
-}
-
-.nav-list{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    gap:30px;
-    margin: 30px;
-}
-
-.nav-list li a {
-    text-decoration: none;    
-    color: black;            
-    padding: 10px 20px;      
-    display: block;          
-}
-
-.nav-list li a:hover {
-    background-color: rgb(182, 181, 193); 
-} */
-
 
 .about-div {
     display: grid;
-    grid-template-columns:2fr 1fr; 
-    width: 100%;
+    grid-template-columns:3fr 2fr ; 
+    width:auto;
     align-items: center;
-    gap: 10px;
-    margin-right: 20px;
-  }
-
+   }
 
 .process-grid {
     display: grid;
@@ -108,13 +81,18 @@ body {
 }
 
 h3 {
-    font-size: 40px;
-    margin-right: 20px;
+    font-size: 30px;
+    padding-right: 20px;
 }
 
 p{
-    font-size: 30px;
-    margin-right: 20px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.Text-volunteers-organizations{
+    padding-right: 0px !important;
+    /* חוסם את הפאדינג של פי והייץ 3  */
 }
 
 .openingParagraph{
@@ -133,10 +111,10 @@ p{
     flex-direction: row; 
     justify-content: space-between; 
     align-items: center; 
-    width: 100%; 
+    width: auto; 
 }
 
-.audience-image img {
+.all-images-target{
     width: 450px;
     display: block;
 }
@@ -146,31 +124,43 @@ h1, h2, h3, .OpeningWelcome {
     font-weight: 700;
 }
 
-
 .site-header {
     background: white;
     position: fixed;
-    width: 100%;
+    left:0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px rgb(17, 25, 122) solid; 
+    padding-left: 0px;
+    padding-right: 0px;
 }
-
 
 .NameOfProject {
     display: flex;
     align-items: center;
 }
 
-.logo-img { height: 80px; }
-.logo { font-size: 22px; }
+.logo-img { height: 60px; }
+
+.logo { 
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+ }
 
 .nav-list {
     display: flex;
     flex-wrap: wrap; 
     list-style: none;
-    gap: 20px;
+    gap: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
     padding-left: 20px;
+
 }
 
 .nav-list a {
@@ -180,76 +170,244 @@ h1, h2, h3, .OpeningWelcome {
 }
 
 
-
-
-
-
-
-/* --- 1. טאבלטים (עד 1024px) --- */
-@media (max-width: 1024px) {
-    body { 
-        background-color: aqua;}
-    .nav-list {
-        gap: 15px; /* מצמצם רווחים כדי שהכל יכנס בשורה אחת */
-    }
-    .logo {
-        font-size: 1.5rem; /* מקטין מעט את שם האתר */
-    }
+.Image-aboutUs{
+    max-width: 100%;
+  height: auto;
 }
 
-/* --- 2. טאבלטים קטנים ומובייל (עד 768px) --- */
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+h2 {
+  font-size: 8vw !important; /* הפונט תמיד יהיה 8% מרוחב המסך */
+}
+}
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+body{
+    background-color: aqua;
+}
 
-     body { 
-        background-color: rgb(136, 255, 0);}
+.item-header{
+        font-size: 23px;
+
+}
+.about-div {
+        grid-template-columns:5fr 4fr ; 
+}
+
+.all-images-target{
+    width: 300px;
+    display: block;
+}
+
+.Image-aboutUs
+{height: 500px important!;}
+
+.all-images-target{
+    width: 300px;
+    height: 250px;
+}
+
+.OpeningWelcome {
+margin-bottom: 50px;
+    margin-top: 0px;
+    font-size: 60px;
+}
+.openingParagraph{
+    font-size:25px;
+}
+
+.logo{
+    font-size: 2vw ;
+}
+
+.nav-list{
+    font-size: 1.5vw;
+   gap:15px;
+
+}
+
+.logo-img{
+    height: 60px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p{
+    font-size: 15px;
+}
+
+}
 
 
-    .site-header {
-        flex-direction: column; /* הלוגו יהיה מעל התפריט */
-        height: auto;           /* מאפשר ל-Header לגדול עם התוכן */
-        padding: 15px 0;
+
+
+
+@media (max-width: 480px) {
+body{
+    background-color: pink;
+}
+
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 100;  
+    }
+
+.nav-list {
+        display: none; 
+        position: fixed;
+       
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        z-index: 99;
+        margin-right: auto;
+
+    }
+
+    .nav-list.showMenu {
+        display: flex; 
+    }
+
+.site-header {
+        flex-direction: row;
+        padding: 0px 0px;
+       
     }
 
     .NameOfProject {
-        margin-bottom: 15px;    /* רווח בין הלוגו לקישורים שמתחתיו */
-        justify-content: center;
+        margin-bottom: 0px;
+        margin-left: auto;
+      
     }
 
-    .nav-list {
-        flex-direction: row;    /* משאיר את הקישורים בשורה */
-        flex-wrap: wrap;        /* אם אין מקום, הם ירדו שורה בצורה מסודרת */
-        justify-content: center;
-        gap: 10px;
-        margin: 0;
-        padding: 0 10px;
+    .logo {
+        font-size: 10px !important;
     }
 
-    .nav-list li a {
-        font-size: 15px;        /* פונט קטן יותר שמתאים למסך צר */
-        padding: 5px 8px;
+    .logo-img {
+        height: 40px;
     }
-}
 
-/* --- 3. סמארטפונים (עד 480px) --- */
-@media (max-width: 480px) {
- body { 
-        background-color: rgb(255, 0, 136);}
-
-    .nav-list {
-        gap: 5px;               /* מינימום רווח במובייל צפוף */
-    }
-    
-    .nav-list li a {
-        font-size: 13px;        /* הקטנה נוספת כדי למנוע חיתוך */
+    /* Hero section */
+    #beggining {
+        padding: 40px 10px;
+        padding-top: 20px;
     }
 
     .OpeningWelcome {
-        font-size: 32px;        /* הכותרת לא תצא מגבולות המסך */
-        margin-top: 20px;
+        font-size: 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .openingParagraph {
+        font-size: 18px;
+        padding: 0 10px;
     }
 
     .hero-buttons {
-        flex-direction: column; /* כפתורים אחד מעל השני במובייל */
-        gap: 10px;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0px 110px;
     }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .about-div {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+
+    .Image-aboutUs {
+        width: 100%;
+        height: auto;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding:0px 30px;
+    }
+
+    .process-item {
+        padding: 20px;
+        font-size: 16px;
+            padding-bottom: 0px;
+    }
+
+    .item-header h4 {
+        font-size: 18px;
+    }
+
+    #process-title {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .audience, 
+    .audience-row {
+        flex-direction: column;
+    }
+
+    .all-images-target {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    h3 {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .Text-volunteers-organizations {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    h4{
+        margin-top: 0px;
+    }
+
+    .audiences {
+    gap: 10px; 
 }
+   
+}
+
