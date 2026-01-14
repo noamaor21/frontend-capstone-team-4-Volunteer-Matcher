@@ -215,9 +215,14 @@ body {
         height: 220px; 
     }
     
-    
+
     .volunteer-btn {
         padding: 12px;
         font-size: 18px;
+    }
+
+    .org-content h3 {
+        margin-top: 5px;
+
     }
 }
