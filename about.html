@@ -7,71 +7,163 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="ABOUT.CSS">
 </head>
 <body>
 
-    <section id="stories-section" class="page-section">
-        <h1 id="stories-title" class="section-title">סיפורים של מתנדבים</h1>
-        <p class="section-subtitle">הנה כמה מהסיפורים המרגשים של מתנדבים ועמותות שחיברנו:</p>
+    <header id="site-header" class="site-header">
+        <div class="NameOfProject" id="Volunteer">
+            <img src="./Logo.png" alt="Volunteer Matcher Logo" class="logo-img">
+            <h1 class="logo">Volunteer Matcher</h1>
+        </div>
+        <nav id="primary-nav" class="nav">
+            <ul class="nav-list"> 
+                <li><a href="#">הרשמה</a></li>
+                <li><a href="#">דף הבית</a></li>
+                <li><a href="#">חיפוש התנדבויות</a></li>
+                <li><a href="#">עלינו</a></li>
+                <li><a href="#">עמותת ״יד לקשיש״</a></li>
+                <li><a href="#">איזור אישי</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <main>
+        <section id="stories-section" class="page-section">
+            <h1 id="stories-title" class="section-title">סיפורים של מתנדבים</h1>
+            <p class="section-subtitle">הנה כמה מהסיפורים המרגשים של מתנדבים ועמותות שחיברנו:</p>
         
-        <div id="stories-container" class="stories-wrapper">
-            <div id="story-hadas" class="story-card">
-                <h3>הדס והמרכז לקשיש</h3>
-                <p>"מצאתי התנדבות קרוב לביתי דרך האתר. כל שבוע אני מבקרת את שרה, קשישה בודדה, וזה ממלא את שתינו שמחה. פשוט מדהים!"</p>
+            <div id="stories-container" class="stories-wrapper">
+                <div id="story-hadas" class="story-card">
+                    <h3>הדס והמרכז לקשיש</h3>
+                    <p>"מצאתי התנדבות קרוב לביתי דרך האתר. כל שבוע אני מבקרת את שרה, קשישה בודדה, וזה ממלא את שתינו שמחה. פשוט מדהים!"</p>
+                </div>
+                <div id="story-green-project" class="story-card">
+                    <h3>פרויקט "ירוק בעיר"</h3>
+                    <p>"היינו זקוקים למתנדבים שיסייעו לנו בגינות הקהילתיות. הפלטפורמה חיברה אותנו לעשרות מתנדבים נפלאים ששינו את פני הפרויקט."</p>
+                </div>
+                <div id="story-amir" class="story-card">
+                    <h3>אמיר ועמותת "לתת תקווה"</h3>
+                    <p>"כמהנדס תוכנה, חיפשתי דרך לתרום מיכולותיי. מצאתי עמותה שעוזרת לילדים בסיכון ופיתחתי עבורם מערכת לניהול מתנדבים."</p>
+                </div>
             </div>
-            <div id="story-green-project" class="story-card">
-                <h3>פרויקט "ירוק בעיר"</h3>
-                <p>"היינו זקוקים למתנדבים שיסייעו לנו בגינות הקהילתיות. הפלטפורמה חיברה אותנו לעשרות מתנדבים נפלאים ששינו את פני הפרויקט."</p>
+        </section>
+
+        <section id="faq-section" class="page-section">
+            <h2 id="faq-main-heading" class="section-title">שאלות נפוצות (FAQ)</h2>
+            <div id="faq-list" class="questions-grid">
+                <div id="q-registration" class="faq-box">
+                    <h3>איך אני נרשם כמתנדב?</h3>
+                    <p>לחץ על כפתור "התחל עכשיו" בדף הבית ובחר באפשרות "אני מתנדב". מלא את הפרטים שלך ותחומי העניין.</p>
+                </div>
+                <div id="q-fees" class="faq-box">
+                    <h3>האם יש דמי הרשמה?</h3>
+                    <p>לא, השירות שלנו חינם לחלוטין, הן למתנדבים והן לעמותות. אנו מאמינים בעשיית טוב ללא עלות.</p>
+                </div>
+                <div id="q-organizations" class="faq-box">
+                    <h3>איך עמותות יכולות להצטרף?</h3>
+                    <p>יש לבחור באפשרות "אני עמותה" בעת ההרשמה ולמלא את פרטי הארגון. לאחר אישור, תוכלו לפרסם קריאות למתנדבים.</p>
+                </div>
+                <div id="q-duration" class="faq-box">
+                    <h3>האם אפשר להתנדב לטווח קצר?</h3>
+                    <p>כן, ישנן מגוון אפשרויות התנדבות לטווח קצר וארוך. תוכל לסנן לפי העדפתך בפרופיל שלך.</p>
+                </div>
             </div>
-            <div id="story-amir" class="story-card">
-                <h3>אמיר ועמותת "לתת תקווה"</h3>
-                <p>"כמהנדס תוכנה, חיפשתי דרך לתרום מיכולותיי. מצאתי עמותה שעוזרת לילדים בסיכון ופיתחתי עבורם מערכת לניהול מתנדבים."</p>
+        </section>
+
+        <section class="team-grid-section py-4">
+            <div class="container">
+                <h2 class="text-center mb-4 team-section-title">הצוות שלנו</h2>
+                <div id="team-grid" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="3"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded-4 shadow">
+                        <div class="carousel-item active">
+                            <img src="./Dani.png" class="d-block w-100 team-img" alt="דניאל פרזן">
+                            <div class="carousel-caption team-name-label">
+                                <h5>דניאל פרזן</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Gili.png" class="d-block w-100 team-img" alt="גילי אמסאלם">
+                            <div class="carousel-caption team-name-label">
+                                <h5>גילי אמסאלם</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Shahaf.png" class="d-block w-100 team-img" alt="שחף גלאם">
+                            <div class="carousel-caption team-name-label">
+                                <h5>שחף גלאם</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Noa.png" class="d-block w-100 team-img" alt="נועה מאור">
+                            <div class="carousel-caption team-name-label">
+                                <h5>נועה מאור</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                         <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us-section" class="page-section contact-layout">
+            <div id="contact-text-area" class="contact-info">
+                <h2 id="contact-heading" class="contact-main-title">זקוקים לעזרה? צרו קשר</h2>
+                <p id="contact-desc" class="contact-text">
+                    אם לא מצאתם את מה שחיפשתם, מוזמנים ללחוץ על הצ'אט שלנו במרכז המידע, בצד ימין למטה ותוכלו ליהנות ממענה 24/7. בכל עת ניתן לבקש עזרה מנציג אנושי ונשמח לסייע לכם במסגרת שעות פעילות התמיכה. מרכז המידע שלנו זמין לכם עם מדריכים על כל הפעולות במערכת.
+                </p>
+
+                <div id="action-buttons" class="button-group">
+                    <button id="whatsapp-btn" class="secondary-button">פניה בווטסאפ</button>
+                    <button id="chat-btn" class="primary-button">התחלת צ'אט</button>
+                </div>
+            </div>
+
+            <div id="contact-image-wrapper" class="contact-img-container">
+                <img id="contact-main-img" src="./photo.jpg" alt="צוות תמיכה צור קשר">
+            </div>
+        </section>
+    </main>
+
+    <footer class="custom-footer">
+        <div class="footer-container">
+            <div class="footer-column about">
+                <h4 class="footer-heading">Volunteer Matcher</h4>
+                <p>הפלטפורמה המובילה לחיבור בין מתנדבים לעמותות, במטרה ליצור שינוי בחברה.</p>
+            </div>
+            <div class="footer-column links">
+                <h4 class="footer-heading">קישורים מהירים</h4>
+                <ul>
+                    <li><a href="#">דף הבית</a></li>
+                    <li><a href="#">חיפוש התנדבויות</a></li>
+                    <li><a href="#">עלינו</a></li>
+                </ul>
+            </div>
+            <div class="footer-column contact">
+                <h4 class="footer-heading">צרו קשר</h4>
+                <div class="contact-item">📍 הרצל 100, תל אביב</div>
+                <div class="contact-item">📧 info@volunteermatcher.co.il</div>
             </div>
         </div>
-    </section>
-
-    <section id="faq-section" class="page-section">
-        <h2 id="faq-main-heading" class="section-title">שאלות נפוצות (FAQ)</h2>
-        <div id="faq-list" class="questions-grid">
-            <div id="q-registration" class="faq-box">
-                <h3>איך אני נרשם כמתנדב?</h3>
-                <p>לחץ על כפתור "התחל עכשיו" בדף הבית ובחר באפשרות "אני מתנדב". מלא את הפרטים שלך ותחומי העניין.</p>
-            </div>
-            <div id="q-fees" class="faq-box">
-                <h3>האם יש דמי הרשמה?</h3>
-                <p>לא, השירות שלנו חינם לחלוטין, הן למתנדבים והן לעמותות. אנו מאמינים בעשיית טוב ללא עלות.</p>
-            </div>
-            <div id="q-organizations" class="faq-box">
-                <h3>איך עמותות יכולות להצטרף?</h3>
-                <p>יש לבחור באפשרות "אני עמותה" בעת ההרשמה ולמלא את פרטי הארגון. לאחר אישור, תוכלו לפרסם קריאות למתנדבים.</p>
-            </div>
-            <div id="q-duration" class="faq-box">
-                <h3>האם אפשר להתנדב לטווח קצר?</h3>
-                <p>כן, ישנן מגוון אפשרויות התנדבות לטווח קצר וארוך. תוכל לסנן לפי העדפתך בפרופיל שלך.</p>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Volunteer Matcher | כל הזכויות שמורות ל***</p>
         </div>
-    </section>
+    </footer>
 
-    <section id="contact-us-section" class="page-section contact-layout">
-        <div id="contact-text-area" class="contact-info">
-            <h2 id="contact-heading" class="contact-main-title">זקוקים לעזרה? צרו קשר</h2>
-            <p id="contact-desc" class="contact-text">
-                אם לא מצאתם את מה שחיפשתם, מוזמנים ללחוץ על הצ'אט שלנו במרכז המידע, בצד ימין למטה ותוכלו ליהנות ממענה 24/7. בכל עת ניתן לבקש עזרה מנציג אנושי ונשמח לסייע לכם במסגרת שעות פעילות התמיכה. מרכז המידע שלנו זמין לכם עם מדריכים על כל הפעולות במערכת.
-            </p>
-
-            <div id="action-buttons" class="button-group">
-                <button id="whatsapp-btn" class="secondary-button">פניה בווטסאפ</button>
-                <button id="chat-btn" class="primary-button">התחלת צ'אט</button>
-            </div>
-        </div>
-
-        <div id="contact-image-wrapper" class="contact-img-container">
-            <img id="contact-main-img" src="./photo.jpg" alt="צוות תמיכה צור קשר">
-        </div>
-    </section>
-   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  
 </body>
 </html>
-
-
