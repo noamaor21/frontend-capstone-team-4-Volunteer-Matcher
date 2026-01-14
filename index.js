@@ -26,3 +26,36 @@ menuLinks.forEach(function(link) {
     });
 });
 
+
+
+
+
+
+
+const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
+const body = document.body;
+
+// בדיקה בטעינה: האם המשתמש כבר בחר במצב חשוך?
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    darkModeCheckbox.checked = true; // מסמן את הצ'קבוקס כפעיל
+}
+
+// האזנה לשינוי במצב הצ'קבוקס
+darkModeCheckbox.addEventListener('change', () => {
+    if (darkModeCheckbox.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+
+
+
+
+
+
+

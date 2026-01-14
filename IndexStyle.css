@@ -188,6 +188,64 @@ h1, h2, h3, .OpeningWelcome {
 }
 
 
+body.dark-mode {
+    background-image:  linear-gradient(135deg,#090f3a); 
+    font-family: 'Assistant', sans-serif;
+    color: white;
+}
+
+body.dark-mode .site-header {
+    background-color: #090f3a;
+}
+
+body.dark-mode .nav-list li a {
+    color:white; 
+}
+
+.dark-mode-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#dark-mode-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+body.dark-mode #beggining h1, 
+body.dark-mode #beggining h2, 
+body.dark-mode #beggining h3, 
+body.dark-mode #beggining p,
+body.dark-mode #beggining .openingParagraph{
+    color: var(--color-primary-dark); 
+}
+
+body.dark-mode .btn-primary,
+body.dark-mode .btn-secondary{
+    background-color:#090f3a; 
+    color:white;
+}
+
+body.dark-mode .process-item{
+    background-color: rgb(37, 63, 97);
+}
+
+
+body.dark-mode h1{
+    color: white;
+}
+
+
+
+
+
+
+
 
 
 
@@ -412,5 +470,82 @@ p{
     gap: 10px; 
 }
    
+
+
 }
 
+/* dark mode */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+
+
+
+
+
+
+
+
+/* הסתרת הצ'קבוקס המקורי */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* המסילה של המתג */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* העיגול שזז (הכפתור עצמו) */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* צבע המתג כשהוא דלוק */
+input:checked + .slider {
+  background-color: #93b3f8; /* ירוק, כמו בתמונה שרצית */
+}
+
+/* הזזת העיגול ימינה כשהוא דלוק */
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* יישור הטקסט שליד המתג */
+.nav-dark-mode {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mode-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-primary-blue);
+}
+
+body.dark-mode .mode-text {
+    color: white !important;
+}
