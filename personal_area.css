@@ -33,7 +33,7 @@ body {
 
 .summry-item { text-align: center; }
 .summry-number { font-size: 40px; font-weight: bold; display: block; color: var(--color-accent-orange); }
-.summry-label { color:var(--color-primary-blue); font-size: 15px;font-weight: bold;}
+.summry-label { color:var(--color-primary-blue); font-size: 18px;font-weight: bold;}
 
 
 .card {
@@ -45,7 +45,7 @@ body {
     flex-direction: column;        
 }
 
-.nisayon{
+.log-out{
 align-self: flex-end;
 }
 
@@ -80,7 +80,7 @@ align-self: flex-end;
 .waiting { background: #fff4d1; color: #b28a00; }
 
 
-.edit-btn {
+.log-out-btn {
     padding: 10px; margin-top: 15px;
     background: var(--color-accent-orange); 
     border-radius: 6px; cursor: pointer;
