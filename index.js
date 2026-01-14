@@ -1,12 +1,15 @@
+/* =========================
+   תפריט המבורגר (מובייל)
+========================= */
+
 let hamburgerButton = document.getElementById('hamburger');
 let menu = document.getElementById('menu');
 let menuIcon = document.querySelector('.menuIcon');
 let closeIcon = document.querySelector('.closeIcon');
 
-hamburgerButton.addEventListener('click', function() {
-
+hamburgerButton.addEventListener('click', function () {
     menu.classList.toggle('showMenu');
-    
+
     if (menu.classList.contains('showMenu')) {
         menuIcon.style.display = 'none';
         closeIcon.style.display = 'inline';
@@ -16,10 +19,11 @@ hamburgerButton.addEventListener('click', function() {
     }
 });
 
-const menuLinks = document.querySelectorAll('.nav-list a');
+// סגירת תפריט בלחיצה על לינק
+let menuLinks = document.querySelectorAll('.nav-list a');
 
-menuLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
+menuLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
         menu.classList.remove('showMenu');
         menuIcon.style.display = 'inline';
         closeIcon.style.display = 'none';
@@ -27,35 +31,22 @@ menuLinks.forEach(function(link) {
 });
 
 
+/* =========================
+   Dark Mode
+========================= */
+let darkModeToggle = document.getElementById('dark-mode-toggle');
 
-
-
-
-
-const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
-const body = document.body;
-
-// בדיקה בטעינה: האם המשתמש כבר בחר במצב חשוך?
+// טעינה ראשונית
 if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    darkModeCheckbox.checked = true; // מסמן את הצ'קבוקס כפעיל
+  document.body.classList.add('dark-mode');
 }
 
-// האזנה לשינוי במצב הצ'קבוקס
-darkModeCheckbox.addEventListener('change', () => {
-    if (darkModeCheckbox.checked) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-    }
+darkModeToggle.addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
 });
-
-
-
-
-
-
-
-

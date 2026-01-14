@@ -6,6 +6,7 @@
     --color-accent-orange: #e49708;
 }
 
+
 hr{
     border: 0.5px solid var(--color-accent-orange);
 }
@@ -240,6 +241,14 @@ body.dark-mode h1{
     color: white;
 }
 
+/* מסתיר רק אייקונים של לינקים */
+.nav-list a i {
+    display: none;
+}
+
+#mode-icon {
+    display: inline-block;
+}
 
 
 
@@ -344,35 +353,44 @@ p{
 @media (max-width: 480px) {
 
     #beggining {
-    padding: 20px 10px;
+        padding: 20px 10px;
     }
     
+    
     .hamburger {
-    display: block;
-    font-size: 2rem;
+        display: block;
+        font-size: 2rem;
     }
 
-.nav-list {
+    .nav-list {
         display: none; 
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: white;
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 5px;
+        padding-right: 5px;
         z-index: 99;
         margin-right: auto;
+        font-size: 20px;
+        background-color: var(--color-background-cream);
+        border-top:1px var(--color-primary-blue) solid;
+        
+        
     }
 
- .nav-list.showMenu {
-    display: flex !important;
-}
+    .nav-list.showMenu {
+        display: flex !important;
+        
+    }
 
+    #primary-nav{
+        width: 200px;
+    }
 
-.nav{
-    width: 100px;
-}
-
+    .nav{
+        width: 100px;
+    }
 
     .logo {
         font-size: 13px ;
@@ -467,85 +485,38 @@ p{
     }
 
     .audiences {
-    gap: 10px; 
-}
-   
+        gap: 10px; 
+    }
+
+    .side-nav {
+        justify-items: end;
+    }  
+
+    .nav-list i {
+        display: inline-block !important;
+        margin-left: 12px; 
+        font-size: 1.2rem;
+        color: var(--color-primary-blue);
+    }
 
 
 }
 
-/* dark mode */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 22px;
-}
 
 
-
-
-
-
-
-
-
-/* הסתרת הצ'קבוקס המקורי */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* המסילה של המתג */
-.slider {
-  position: absolute;
+.dark-mode-btn{
+  background: transparent;
+  border: none;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
-/* העיגול שזז (הכפתור עצמו) */
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-/* צבע המתג כשהוא דלוק */
-input:checked + .slider {
-  background-color: #93b3f8; /* ירוק, כמו בתמונה שרצית */
-}
-
-/* הזזת העיגול ימינה כשהוא דלוק */
-input:checked + .slider:before {
-  transform: translateX(22px);
-}
-
-/* יישור הטקסט שליד המתג */
-.nav-dark-mode {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.mode-text {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--color-primary-blue);
-}
-
-body.dark-mode .mode-text {
-    color: white !important;
+.dark-mode-icon{
+  width: 26px;
+  height: 26px;
+  display: block;
 }
