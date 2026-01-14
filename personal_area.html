@@ -14,7 +14,7 @@
 <main class="dashboard-container">
     <section class="page-header">
         <h1>אזור אישי</h1>
-        <p>ברוכים הבאים לעמוד ההתנדבות שלך</p>
+        <p class="welcome">ברוכים הבאים לעמוד ההתנדבות שלך</p>
     </section>
 
     <section class="summry">
@@ -39,22 +39,22 @@
             <p id="user-interests">תחומי עניין: חינוך, סיוע, קהילה</p>
         </div>
         <div class="log-out">
-            <button id=log-out class="log-out-btn">התנתקות</button>
+            <button id="log-out" class="log-out-btn"><strong>התנתקות</strong></button>
         </div>
     </section>
     
         <section class="card">
             <h3 class="card-title">התנדבויות עתידיות</h3>
             <div class="task-item">
-                <h4><strong>עזרה בחלוקת מזון</strong></h4>
-                <span class="sub-text">ארגון: מטבח קהילתי</span>
+                <h4><strong>עזרה במטבח</strong></h4>
+                <span class="sub-text">ארגון:יד לקשיש</span>
                 <span class="sub-text">25/02/2026</span>
             </div>
         </section>
 
             <section class="card">
                 <h3 class="card-title">סטטוס פניות</h3>
-                <table class="status-table">
+                <table class="status-table" aria-label="סטטוס פניות להתנדבות">
                     <thead>
                         <tr>
                             <th>ארגון</th>
@@ -63,7 +63,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>מטבח קהילתי</td>
+                            <td>יד לקשיש</td>
                             <td><span class="status-tag success">אושר</span></td>
                         </tr>
                         <tr>

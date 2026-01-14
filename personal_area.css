@@ -87,11 +87,13 @@ align-self: flex-end;
     border: 2px solid var(--color-accent-orange);
     color: white;
     margin: auto;
-    
-    
-    
 }
-
+h1{
+    font-size: 40px;
+}
+.welcome{
+    font-size: 20px;;
+}
 h4{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -168,6 +170,9 @@ h4{
 
     .summry-number {
         font-size: 32px; 
+    }
+    .summry-label{
+        font-size: 17px;
     }
 
     .page-header h1 {
