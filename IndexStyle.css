@@ -1,0 +1,416 @@
+:root {
+    --color-primary-dark: #161E54;    
+    --color-primary-blue: #22668D;    
+    --color-accent-blue: #8ECDDD;     
+    --color-background-cream: #fcfcf2; 
+    --color-accent-orange: #e49708;
+}
+
+hr{
+    border: 0.5px solid var(--color-accent-orange);
+}
+
+body {
+    direction: rtl; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background: linear-gradient(135deg, #f5f7fa 0%, var(--color-accent-blue) 100%);    color:var(--color-primary-dark);
+    font-family: 'Assistant', sans-serif;
+}
+
+#beggining { 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+    url('https://images.globes.co.il/images/NewGlobes/big_image_800/2019/F9849A6B17CDFCA053B13FA038BA269F_800x392.20190814T175815.jpg');
+    background-size: cover;
+    padding: 80px 0;
+    padding-top: 130px;
+} 
+
+.hamburger {
+  display: none; 
+  background: none;
+  border: none;
+  color: var(--color-primary-blue);
+}
+
+#welcome{
+    text-align: center;
+    padding: 20px;
+}
+
+.OpeningWelcome {
+    font-size: 80px;
+}
+
+.openingParagraph {
+    padding-right: 0px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 1.6rem;   
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: var( --color-accent-blue);
+    
+}
+
+.about-div {
+    display: grid;
+    grid-template-columns:3fr 2fr ; 
+    width:auto;
+    align-items: center;
+   }
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 20px;
+}
+
+.process-item {
+    background: var(--color-background-cream);
+    padding: 30px;
+    border-radius: 8px;
+    font-size: 30px;
+    border-top: 4px solid var(--color-accent-orange) ;
+}
+
+#process-title{
+    padding-right: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+p{
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.Text-volunteers-organizations{
+    padding-right: 0px !important;
+    /* חוסם את הפאדינג של פי והייץ 3  */
+}
+
+.openingParagraph{
+    font-size: 30px;
+}
+
+.audiences {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    direction: rtl; 
+}
+
+.audience, .audience-row {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: auto; 
+}
+
+.all-images-target{
+    width: 450px;
+    display: block;
+}
+
+h1, h2, h3, .OpeningWelcome {
+    font-family: 'Heebo', sans-serif; 
+    font-weight: 700;
+}
+
+.site-header {
+    background: var(--color-background-cream);
+    position: fixed;
+    left:0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px var(--color-primary-blue) solid; 
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.NameOfProject {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img { height: 60px; }
+
+.logo { 
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--color-primary-blue);
+
+ }
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap; 
+    list-style: none;
+    gap: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--color-primary-blue);
+    font-weight: bold;
+}
+
+
+.Image-aboutUs{
+    max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+h2 {
+  font-size: 8vw !important; /* הפונט תמיד יהיה 8% מרוחב המסך */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+.item-header{
+        font-size: 23px;
+
+}
+.about-div {
+        grid-template-columns:5fr 4fr ; 
+}
+
+.all-images-target{
+    width: 300px;
+    display: block;
+}
+
+.Image-aboutUs
+{height: 500px important!;}
+
+.all-images-target{
+    width: 300px;
+    height: 250px;
+}
+
+.OpeningWelcome {
+margin-bottom: 50px;
+    margin-top: 0px;
+    font-size: 60px;
+}
+.openingParagraph{
+    font-size:25px;
+}
+
+.logo{
+    font-size: 2vw ;
+}
+
+.nav-list{
+    font-size: 1.5vw;
+   gap:15px;
+
+}
+
+.logo-img{
+    height: 60px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p{
+    font-size: 15px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+    #beggining {
+    padding: 20px 10px;
+    }
+    
+    .hamburger {
+    display: block;
+    font-size: 2rem;
+    }
+
+.nav-list {
+        display: none; 
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        padding-top: 50px;
+        z-index: 99;
+        margin-right: auto;
+    }
+
+ .nav-list.showMenu {
+    display: flex !important;
+}
+
+
+.nav{
+    width: 100px;
+}
+
+
+    .logo {
+        font-size: 13px ;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .OpeningWelcome {
+        font-size: 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .openingParagraph {
+        font-size: 18px;
+        padding: 0 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0px 120px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .about-div {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+
+    .Image-aboutUs {
+        width: 100%;
+        height: auto;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding:0px 30px;
+    }
+
+    .process-item {
+        padding: 20px;
+        font-size: 16px;
+        padding-bottom: 0px;
+    }
+
+    #process-title {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .audience, 
+    .audience-row {
+        flex-direction: column;
+    }
+
+    .all-images-target {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    h3 {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .Text-volunteers-organizations {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    h4{
+        margin-top: 0px;
+    }
+
+    .audiences {
+    gap: 10px; 
+}
+   
+}
+
