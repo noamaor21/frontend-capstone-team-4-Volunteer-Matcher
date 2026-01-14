@@ -1,11 +1,20 @@
+:root {
+    --color-primary-dark: #161E54;    
+    --color-primary-blue: #22668D;    
+    --color-accent-blue: #8ECDDD;     
+    --color-background-cream: #FFFFEB; 
+    --color-accent-orange: #e49708;
+}
 
 body {
     font-family: 'Assistant', sans-serif;
-    background-color: #f9f9f9;
     margin: 0;
-    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, var(--color-accent-blue) 100%);
 }
 
+.dashboard-container{
+    margin-top: var(--header-height);
+}
 
 .page-header {
     text-align: center;
@@ -23,8 +32,8 @@ body {
 }
 
 .summry-item { text-align: center; }
-.summry-number { font-size: 40px; font-weight: bold; display: block; color: #0d6efd; }
-.summry-label { color: #666; font-size: 15px; }
+.summry-number { font-size: 40px; font-weight: bold; display: block; color: var(--color-accent-orange); }
+.summry-label { color:var(--color-primary-blue); font-size: 15px;font-weight: bold;}
 
 
 .card {
@@ -32,13 +41,20 @@ body {
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;        
+}
+
+.nisayon{
+align-self: flex-end;
 }
 
 .card-title {
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid var(--color-accent-blue);
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 22px;
+    color: var(--color-primary-dark);
 }
 
 
@@ -65,9 +81,15 @@ body {
 
 
 .edit-btn {
-    width: 100%; padding: 10px; margin-top: 15px;
-    background: white; border: 1px solid #0d6efd;
-    color: #0d6efd; border-radius: 6px; cursor: pointer;
+    padding: 10px; margin-top: 15px;
+    background: var(--color-accent-orange); 
+    border-radius: 6px; cursor: pointer;
+    border: 2px solid var(--color-accent-orange);
+    color: white;
+    margin: auto;
+    
+    
+    
 }
 
 h4{
