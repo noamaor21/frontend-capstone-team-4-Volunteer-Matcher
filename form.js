@@ -47,3 +47,15 @@ localStorage.setItem("user_address", userAddress);
 localStorage.setItem("user_city", userCity);
 
 });
+
+var savedOrg = localStorage.getItem("chosen_org");
+
+if (savedOrg !== null) {
+    var tableBody = document.querySelector(".status-table tbody");
+
+    tableBody.innerHTML = tableBody.innerHTML + 
+        "<tr>" +
+            "<td>" + savedOrg + "</td>" +
+            "<td><span class='status-tag waiting'>בהמתנה</span></td>" +
+        "</tr>";
+}
