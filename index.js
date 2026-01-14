@@ -25,3 +25,4 @@ menuLinks.forEach(function(link) {
         closeIcon.style.display = 'none';
     });
 });
+
