@@ -27,3 +27,14 @@ else if (address !== null && address !== "") {
 else {
     locationDisplay.innerHTML = ""; 
 }
+
+var logoutBtn = document.getElementById("log-out");
+
+logoutBtn.addEventListener("click", function() {
+    
+    localStorage.clear();
+    
+    alert("התנתקת בהצלחה.");
+
+    window.location.href = "form.html";
+});

@@ -1,12 +1,15 @@
+/* =========================
+   תפריט המבורגר (מובייל)
+========================= */
+
 let hamburgerButton = document.getElementById('hamburger');
 let menu = document.getElementById('menu');
 let menuIcon = document.querySelector('.menuIcon');
 let closeIcon = document.querySelector('.closeIcon');
 
-hamburgerButton.addEventListener('click', function() {
-
+hamburgerButton.addEventListener('click', function () {
     menu.classList.toggle('showMenu');
-    
+
     if (menu.classList.contains('showMenu')) {
         menuIcon.style.display = 'none';
         closeIcon.style.display = 'inline';
@@ -16,13 +19,34 @@ hamburgerButton.addEventListener('click', function() {
     }
 });
 
-const menuLinks = document.querySelectorAll('.nav-list a');
+// סגירת תפריט בלחיצה על לינק
+let menuLinks = document.querySelectorAll('.nav-list a');
 
-menuLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
+menuLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
         menu.classList.remove('showMenu');
         menuIcon.style.display = 'inline';
         closeIcon.style.display = 'none';
     });
 });
 
+
+/* =========================
+   Dark Mode
+========================= */
+let darkModeToggle = document.getElementById('dark-mode-toggle');
+
+// טעינה ראשונית
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+}
+
+darkModeToggle.addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
