@@ -281,6 +281,10 @@ h2 {
 
 
 
+
+
+
+
 @media (max-width: 768px) {
 
 
@@ -350,6 +354,12 @@ p{
 
 
 
+
+
+
+
+
+
 @media (max-width: 480px) {
 
     #beggining {
@@ -375,7 +385,6 @@ p{
         font-size: 20px;
         background-color: var(--color-background-cream);
         border-top:1px var(--color-primary-blue) solid;
-        
         
     }
 
@@ -499,8 +508,33 @@ p{
         color: var(--color-primary-blue);
     }
 
+    body.dark-mode .dark-mode-btn svg{
+    color: var(--color-primary-blue) !important;
+    }
+
+    body.dark-mode .nav-list li a {
+    color: var(--color-primary-blue); 
+    }
+    
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -508,15 +542,15 @@ p{
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 8px;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
+
 }
 
-.dark-mode-icon{
-  width: 26px;
-  height: 26px;
-  display: block;
+
+.dark-mode-btn svg{
+  color: var(--color-primary-blue);
+}
+
+body.dark-mode .dark-mode-btn svg{
+  color: white;
 }
