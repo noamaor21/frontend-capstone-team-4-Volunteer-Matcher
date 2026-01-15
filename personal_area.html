@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איזור אישי</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="personal_area.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<main class="dashboard-container">
+    <section class="page-header">
+        <h1>אזור אישי</h1>
+        <p class="welcome">ברוכים הבאים לעמוד ההתנדבות שלך</p>
+    </section>
+
+    <section class="summry">
+        <div class="summry-item">
+            <span class="summry-number">12</span>
+            <span class="summry-label">שעות התנדבות</span>
+        </div>
+        <div class="summry-item">
+            <span class="summry-number">2</span>
+            <span class="summry-label">פניות שנשלחו</span>
+        </div>
+        <div class="summry-item">
+            <span class="summry-number">1</span>
+            <span class="summry-label">התנדבויות פעילות</span>
+        </div>
+    </section>
+    <section class="card">
+        <div>
+            <h3 class="card-title">פרופיל משתמש</h3>
+            <h4 id="user-name">דוד כהן</h4>
+            <p id="user-location">איתמר בן אבי 61,נתניה</p>
+            <p id="user-interests">תחומי עניין: חינוך, סיוע, קהילה</p>
+        </div>
+        <div class="log-out">
+            <button id="log-out" class="log-out-btn"><strong>התנתקות</strong>
+            <i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </section>
+    
+        <section class="card">
+            <h3 class="card-title">התנדבויות עתידיות</h3>
+            <div class="task-item">
+                <h4><strong>ליווי קשיש</strong></h4>
+                <span class="sub-text">ארגון:יד לקשיש</span>
+                <span class="sub-text">25/02/2026</span>
+            </div>
+        </section>
+
+            <section class="card">
+                <h3 class="card-title">סטטוס פניות</h3>
+                <table class="status-table" aria-label="סטטוס פניות להתנדבות">
+                    <thead>
+                        <tr>
+                            <th>ארגון</th>
+                            <th>סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>יד לקשיש</td>
+                            <td><span class="status-tag success">אושר</span></td>
+                        </tr>
+                        <tr>
+                            <td>צער בעלי חיים</td>
+                            <td><span class="status-tag waiting">בהמתנה</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        
+
+        
+    
+</main>
+<script src="personal_area.js"></script>
+</body>
+</html>

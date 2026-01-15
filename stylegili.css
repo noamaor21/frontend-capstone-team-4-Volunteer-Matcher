@@ -1,0 +1,310 @@
+
+:root {
+    --color-primary-dark: #161E54;    
+    --color-primary-blue: #22668D;    
+    --color-accent-blue: #8ECDDD;     
+    --color-background-cream: #FCFCF2; 
+    --color-accent-orange: #e49708;
+    --color-accent-orangeina: #fadbc0;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    direction: rtl;
+    background-color: var(--color-background-cream);
+    color: var(--color-primary-dark);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+    font-size: 20px;
+    padding-top: 0px;
+    background: linear-gradient(135deg, #f5f7fa 0%, var(--color-accent-blue) 100%);
+}
+
+h1, title {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-primary-dark);
+}
+
+h2, h3 {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+.opportunities-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center; 
+    color: var(--color-primary-dark);
+}
+
+.image-window {
+    width: 100%;
+    height: 450px;       
+    overflow: hidden;  
+    position: relative;  
+}
+
+.movable-img {
+    width: 100%;         
+    height: auto;        
+    min-height: 450px;   
+    position: absolute;  
+    left: 0;           
+    top: -200px;     
+}
+
+.main-title {
+    font-size: 4em;           
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    margin-bottom: 0; 
+    margin-top: 20px;         
+    line-height: 1.1;         
+}
+
+.subtitle {
+    font-size: 1.8em;
+    font-weight: 700; 
+    color: var(--color-primary-blue);
+    margin-top: 5px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+}
+
+.about-section {
+    max-width: 90%;
+    margin: 40px auto;
+    color: var(--color-primary-dark);
+    padding: 0 20px;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 20px; 
+    font-size: 18px;
+}
+
+.opportunities-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.opportunities-header h2 {
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    margin-bottom: 0; 
+    line-height: 1.1;
+    text-align: center;
+}
+
+.role-instruction {
+    font-size: 1.5em; 
+    font-weight: 700;
+    color: var(--color-primary-blue);
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: block;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.volunteer-card {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    background: var(--color-background-cream);
+    border: 1px solid var(--color-primary-blue);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: right;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+.volunteer-card-side {
+    background-color: var(--color-primary-blue);
+    display: flex;
+    border-left: 1px solid var(--color-primary-blue);
+}
+
+.volunteer-card-content {
+    padding: 20px;
+    font-size: 18px;
+    padding-right: 50px;
+    font-size: 18px;
+  
+    
+}
+
+.volunteer-card-content h2 {
+    margin-top: 0;
+    color: var(--color-primary-dark);
+    font-size: 28px;
+    line-height: 2;
+    word-spacing: 2px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    font-weight: 700;
+}
+
+.volunteer-card-content ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+    color: var(--color-primary-blue);
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.volunteer-btn {
+    background-color: var(--color-accent-orange);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    display: inline-block; 
+    margin-top: 20px;  
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.volunteer-btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        padding: 0 30px;
+    }
+
+    .image-window {
+        height: 400px; 
+    }
+
+    .main-title {
+        font-size: 3em;
+    }
+
+    .opportunities-header h2 {
+        font-size: 2.2em;
+    }
+    
+    .volunteer-card {
+        gap: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .image-window {
+        height: 300px;
+    }
+
+    .movable-img {
+        top: -50px; 
+        min-height: 300px;
+    }
+
+    .main-title {
+        font-size: 2.5em;
+    }
+
+    .opportunities-header h2 {
+        font-size: 2em;
+    }
+
+    .volunteer-card {
+        grid-template-columns: 60px 1fr; 
+    }
+
+    .volunteer-card-side {
+        font-size: 20px; 
+    }
+
+    .volunteer-btn {
+        width: auto;
+        display: block;
+        float: none;      
+        text-align: center;
+         margin: 20px;      
+    }
+}
+
+@media (max-width: 480px) {
+    .image-window {
+        height: 250px;
+    }
+    
+    .movable-img {
+        position: relative; 
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+        min-height: auto;
+    }
+
+    .main-title {
+        font-size: 2em; 
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .volunteer-card {
+        display: flex;         
+        flex-direction: column;
+    }
+
+    .volunteer-card-side {
+        width: 100%;        
+        height: 40px;       
+        border-left: none;  
+        border-bottom: 1px solid var(--color-primary-blue); 
+    }
+
+    .volunteer-card-content {
+        padding: 15px;     
+    }
+
+    .volunteer-card-content h2 {
+        font-size: 20px;
+    }
+
+    .container, .about-section {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+

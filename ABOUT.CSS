@@ -1,0 +1,150 @@
+body {
+    font-family: 'Assistant', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color:#F4E2DE;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #025259;
+}
+
+h1, h2, h3, .section-title, .contact-main-title {
+    font-family: 'Heebo', sans-serif; 
+    font-weight: 700;
+    color: #025259;
+}
+
+.page-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    border-bottom: 1px solid rgba(2, 82, 89, 0.1); 
+}
+
+.page-section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.stories-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.story-card {
+    background-color:#025259; 
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.story-card h3 {
+    margin-top: 0;
+    color: #F29325;
+}
+
+.story-card {
+    color: #F4E2DE ;
+}
+
+.questions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.faq-box {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-right: 6px solid #D94F04; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.faq-box h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: black;
+}
+
+.contact-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-img-container {
+    flex: 0.8;
+    
+}
+
+.contact-img-container img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-button {
+    background-color:#F29325;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: #025259;
+    border: 2px solid #025259;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background-color: #D94F04;
+    opacity: 0.9;
+}
+
+.secondary-button:hover {
+    background-color: #007172;
+    color: #F4E2DE;
+    border-color: #007172;
+}
