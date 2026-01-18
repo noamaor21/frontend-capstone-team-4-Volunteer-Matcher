@@ -1,6 +1,4 @@
-/* =========================
-תפריט המבורגר (Mobile Menu)
-========================= */
+/* === תפריט המבורגר (מובייל) === */
 let hamburgerButton = document.getElementById('hamburger');
 let menu = document.getElementById('menu');
 let menuIcon = document.querySelector('.menuIcon');
@@ -29,9 +27,7 @@ if (hamburgerButton && menu && menuIcon && closeIcon) {
     });
 }
 
-/* =========================
-Dark Mode (עם החלפת אייקון)
-========================= */
+/* === Dark Mode (עם החלפת אייקון וזיכרון) === */
 let darkModeToggle = document.getElementById('dark-mode-toggle');
 let iconMoon = document.getElementById('icon-moon');
 let iconSun = document.getElementById('icon-sun');
@@ -47,7 +43,7 @@ function updateThemeIcon() {
     }
 }
 
-// טעינה ראשונית מה-LocalStorage
+// טעינה מהזיכרון של הדפדפן
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
 }
@@ -64,3 +60,15 @@ if (darkModeToggle) {
         updateThemeIcon();
     });
 }
+
+var personalLink = document.getElementById("personal-link");
+
+personalLink.addEventListener("click", function(event) {
+    
+    if (localStorage.getItem("user_full_name") === null) {
+        event.preventDefault(); 
+        alert("עליך להירשם קודם כדי להיכנס לאזור האישי!");
+        window.location.href = "form.html"; 
+    }
+});
+
