@@ -38,6 +38,17 @@ logoutBtn.addEventListener("click", function() {
 
     window.location.href = "form.html";
 });
+var savedOrg = localStorage.getItem("chosen_org");
+
+if (savedOrg !== null) {
+    var tableBody = document.querySelector(".status-table tbody");
+
+    tableBody.innerHTML = tableBody.innerHTML + 
+        "<tr>" +
+            "<td>" + savedOrg + "</td>" +
+            "<td><span class='status-tag waiting'>בהמתנה</span></td>" +
+        "</tr>";
+}
 
 
 

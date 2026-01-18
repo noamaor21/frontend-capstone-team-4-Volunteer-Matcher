@@ -2,7 +2,7 @@
     --color-primary-dark: #161E54;    
     --color-primary-blue: #22668D;    
     --color-accent-blue: #8ECDDD;     
-    --color-background-cream: #FFFFEB; 
+    --color-background-cream: #fcfcf2; 
     --color-accent-orange: #e49708;
     --color-darkmode-blue: rgb(37,63,97);
 }
@@ -284,7 +284,7 @@ body.dark-mode .dark-mode-btn svg{
 }
 
 .nav-list{
-    font-size: 1.5vw;
+    font-size: 1.8vw;
    gap:15px;
 
 }
