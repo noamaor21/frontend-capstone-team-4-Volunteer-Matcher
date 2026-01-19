@@ -24,105 +24,94 @@ body {
 }
 
 
-/* nav */
-
 .site-header {
-    background: var(--color-background-cream);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px var(--color-primary-blue) solid;
-    z-index: 1000;
-    height: var(--header-height);
+  background: var(--color-background-cream);
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px var(--color-primary-blue) solid;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .NameOfProject {
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
+  display: flex;
+  align-items: center;
 }
 
-.logo-img {
-    height: 60px;
-}
-
+.logo-img { height: 60px; }
 
 .logo {
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: var(--color-primary-blue);
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: var(--color-primary-blue);
 }
 
 .nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 12px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-right: 0px;
-    padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 20px;
 }
 
 .nav-list a {
-    text-decoration: none;
-    color: var(--color-primary-blue);
-    font-weight: bold;
+  text-decoration: none;
+  color: var(--color-primary-blue);
+  font-weight: bold;
 }
 
+/* מסתיר רק אייקונים של לינקים (בדסקטופ) */
 .nav-list a i {
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 1.1rem;
+  display: none;
 }
 
+
+/* ===== HAMBURGER ===== */
 .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    z-index: 1001;
-    color: var(--color-primary-blue);
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-primary-blue);
 }
 
 
-/* =========================
-   DARK MODE הגדרות כלליות לעמוד
-   ========================= */
-
-.dark-mode-btn {
-    min-width: 40px;
-    min-height: 40px;
-    z-index: 1100;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.dark-mode-btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dark-mode-btn svg {
-    color: var(--color-primary-blue);
-    width: 16px !important;
-    height: 16px !important;
-    display: inline-block;
+.dark-mode-btn svg{
+  color: var(--color-primary-blue);
 }
 
-
+/* ===== Dark Mode צבעים לנאב ===== */
 body.dark-mode .site-header {
-    background-color: var(--color-darkmode-blue);
+  background-color: #090f3a;
 }
 
-body.dark-mode .nav-list li a,
-body.dark-mode .dark-mode-btn svg,
-body.dark-mode .hamburger {
-    color: var(--color-background-cream) !important;
+body.dark-mode .nav-list li a {
+  color: white;
 }
+
+body.dark-mode .dark-mode-btn svg{
+  color: white;
+}
+
+
+
 
 body.dark-mode {
     background: var(--color-darkmode-blue);
@@ -364,40 +353,7 @@ h3,
 
 
 @media (max-width: 480px) {
-    .hamburger {
-        display: block;
-        font-size: 2rem;
-
-    }
-
-    .nav-list {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 5px;
-        padding-right: 5px;
-        z-index: 99;
-        margin-right: auto;
-        font-size: 20px;
-        background-color: var(--color-background-cream);
-        border-top: 1px var(--color-primary-blue) solid;
-    }
-
-    .nav-list.showMenu {
-        display: flex !important;
-    }
-
-    .nav-list i {
-        margin-left: 12px;
-        font-size: 1.2rem;
-        color: var(--color-primary-blue);
-    }
+   
 
     .team-grid {
         grid-template-columns: 1fr;
@@ -408,10 +364,64 @@ h3,
         width: 160px;
         height: 160px;
     }
+.hamburger {
+    display: block;
+    font-size: 2rem;
+  }
 
-    body.dark-mode .nav-list {
-        background-color: var(--color-primary-dark);
-    }
+  .nav-list {
+    display: none;
+    position: fixed;
+    width: 45%;
+    top:60px;
+    left: 0;
+    height: 100vh;
+    text-align: right;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-right: 5px;
+    z-index: 99;
+    margin-right: auto;
+    font-size: 20px;
+    background-color: var(--color-background-cream);
+    border-top: 1px var(--color-primary-blue) solid;
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0
+    
+    
+  }
+  
+  .nav-list.showMenu {
+    display: flex !important;
+    padding-top: 5px;
+    padding-right: 5px;
+    
+  }
+  .nav-list a {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .nav-list i {
+    display: inline-block !important;
+    margin-left: 14px;
+    font-size: 1.2rem;
+    color: var(--color-primary-blue);
+  }
+
+  body.dark-mode .dark-mode-btn svg{
+    color: var(--color-primary-blue) !important;
+  }
+
+  body.dark-mode .nav-list li a {
+    color: var(--color-primary-blue);
+  }
+  
+  .logo{
+    font-size: 16px !important;
+  }
+  
 }
 
 
@@ -422,39 +432,27 @@ h3,
         text-align: right;
     }
 
-    .site-header {
-        flex-wrap: nowrap !important;
-        padding: 0 10px !important;
-        justify-content: space-between;
-    }
+    .logo{
+    font-size: 2vw ;
+}
+
+.nav-list{
+    font-size: 1.2vw;
+   gap:10px !important;
+
+}
+.nav-list a {
+        font-size: 13px !important;
+}
+
+.logo-img{
+    height: 60px;
+}
 
 
 
-    .nav-list {
-        flex-wrap: nowrap !important;
-        gap: 8px !important;
-        padding-left: 5px !important;
-    }
+   
 
-    .nav-list a {
-        font-size: 11px !important; 
-        white-space: nowrap !important;
-        padding: 0 2px !important;
-    }
-
-    .nav-list li {
-        white-space: nowrap;
-    }
-
-
-
-    .logo {
-        font-size: 14px;
-    }
-
-    .logo-img {
-        height: 35px;
-    }
 
     .stories-wrapper {
         flex-direction: row;
@@ -498,17 +496,7 @@ h3,
 }
 
 @media (min-width: 1024px) {
-    .site-header {
-        padding: 0 20px;
-    }
-
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    .logo-img {
-        height: 60px;
-    }
+    
 
     .page-section {
         padding: 60px 20px
