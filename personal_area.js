@@ -1,33 +1,31 @@
+// --- שלב א': שליפת האובייקט מהזיכרון ---
+var rawData = localStorage.getItem("user_state"); // מקבלים את הטקסט
+var user = JSON.parse(rawData); // הופכים את הטקסט חזרה לאובייקט JS חי
 
-var fullName = localStorage.getItem("user_full_name");
-var savedInterests = localStorage.getItem("user_interests");
-var nameDisplay = document.getElementById("user-name");
-var interestsDisplay = document.getElementById("user-interests");
-
-nameDisplay.innerHTML = fullName;
-interestsDisplay.innerHTML = "תחומי עניין: " + savedInterests;
-
-var address = localStorage.getItem("user_address");
-var city = localStorage.getItem("user_city");
-
-
-var locationDisplay = document.getElementById("user-location");
-
-
-if (address !== null && city !== null && address !== "" && city !== "") {
+// בדיקה אם המשתמש קיים בזיכרון
+if (user) {
+    // --- שלב ב': עדכון ה-HTML בעזרת האובייקט ---
     
-    locationDisplay.innerHTML = address + ", " + city;
-} 
-else if (city !== null && city !== "") {
-    locationDisplay.innerHTML = city;
-}
-else if (address !== null && address !== "") {
-    locationDisplay.innerHTML = address;
-}
-else {
-    locationDisplay.innerHTML = ""; 
-}
+    // הצגת השם המלא
+    var nameDisplay = document.getElementById("user-name");
+    nameDisplay.innerHTML = user.fullName;
 
+    // הצגת תחומי עניין (חיבור המערך למחרוזת אחת עם פסיקים)
+    var interestsDisplay = document.getElementById("user-interests");
+    interestsDisplay.innerHTML = "תחומי עניין: " + user.interests.join(", ");
+
+    // הצגת מיקום (בדיקה אם יש עיר וכתובת)
+    var locationDisplay = document.getElementById("user-location");
+    if (user.address && user.city) {
+        locationDisplay.innerHTML = user.address + ", " + user.city;
+    } else if (user.city) {
+        locationDisplay.innerHTML = user.city;
+    } else if (user.address) {
+        locationDisplay.innerHTML = user.address;
+    } else {
+        locationDisplay.innerHTML = "מיקום לא הוזן";
+    }
+}
 var logoutBtn = document.getElementById("log-out");
 
 logoutBtn.addEventListener("click", function() {
