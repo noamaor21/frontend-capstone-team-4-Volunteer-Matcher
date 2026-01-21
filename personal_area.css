@@ -216,7 +216,7 @@ body.dark-mode .log-out-btn {
 }
 
 body.dark-mode .site-header {
-  background-color: #090f3a;
+  background-color: var(--color-darkmode-blue);
 }
 
 body.dark-mode .nav-list li a {
@@ -227,7 +227,54 @@ body.dark-mode .dark-mode-btn svg{
   color: white;
 }
 
+.custom-footer {
+    background-color: var(--color-background-cream); 
+    color: var(--color-primary-dark);
+    padding: 15px 20px 5px; 
+    border-top: 1px solid var(--color-primary-blue);
+    font-size: 0.85rem;
+}
 
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column { 
+    flex: 1; 
+    min-width: 200px; 
+}
+
+.footer-heading { 
+    color: var(--color-primary-blue); 
+    margin-bottom: 3px; 
+}
+
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 10px; 
+    padding-top: 10px; 
+    border-top: 1px solid rgba(22, 30, 84, 0.1); 
+}
+
+/* --- הגדרות Dark Mode --- */
+body.dark-mode .custom-footer {
+    background-color: var(--color-darkmode-blue);
+    color: white !important; 
+    border-top-color: var(--color-primary-blue) !important;
+}
+
+body.dark-mode .footer-heading {
+    color: var(--color-accent-blue);
+}
+
+body.dark-mode .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
 
 
 @media (max-width: 1024px) {
@@ -263,6 +310,9 @@ body.dark-mode .dark-mode-btn svg{
     }
     .sub-text{
         font-size: 18px;
+    }
+    .footer-heading{
+      font-size: 20px;
     }
 }
 
@@ -378,6 +428,18 @@ body.dark-mode .dark-mode-btn svg{
     font-size: 16px !important;
   }
 
+    body.dark-mode .nav-list {
+    background-color: #090f3a;
+     
+    }
+
+    body.dark-mode .nav-list a, 
+    body.dark-mode .nav-list i {
+    color: white !important;
+    }
+    body.dark-mode #icon-sun {
+    color: white !important; 
+    }
 }
 
 

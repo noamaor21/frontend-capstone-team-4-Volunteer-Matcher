@@ -156,7 +156,7 @@ body {
 
 /* ===== Dark Mode צבעים לנאב ===== */
 body.dark-mode .site-header {
-  background-color: #090f3a;
+  background-color:var(--color-darkmode-blue);
 }
 
 body.dark-mode .nav-list li a {
@@ -268,7 +268,7 @@ body.dark-mode .btn-outline-primary {
 /* --- הגדרות Dark Mode --- */
 body.dark-mode .custom-footer {
     background-color: var(--color-darkmode-blue);
-    color: var(--white);
+    color: white !important; 
     border-top-color: var(--color-primary-blue) !important;
 }
 
@@ -388,7 +388,19 @@ body.dark-mode .footer-bottom {
     font-size: 16px !important;
   }
 
-    
+    body.dark-mode .nav-list {
+    background-color: #090f3a;
+     
+    }
+
+    body.dark-mode .nav-list a, 
+    body.dark-mode .nav-list i {
+    color: white !important;
+    }
+    body.dark-mode #icon-sun {
+    color: white !important; 
+   
+}
 
   
 
