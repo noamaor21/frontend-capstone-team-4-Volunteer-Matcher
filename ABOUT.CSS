@@ -213,7 +213,7 @@ h3,
     background-color: var(--white);
     border-right: 6px solid var(--color-accent-orange);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 9px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
