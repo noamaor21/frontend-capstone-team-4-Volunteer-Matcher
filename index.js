@@ -88,3 +88,14 @@ if (learnMoreBtn) {
     window.location.href = './about.html';
   });
 }
+var personalLink = document.getElementById("personal-link");
+
+personalLink.addEventListener("click", function(event) {
+    
+    if (localStorage.getItem("user_full_name") === null) {
+        event.preventDefault(); 
+        alert("עליך להירשם קודם כדי להיכנס לאזור האישי!");
+        window.location.href = "form.html"; 
+    }
+});
+
