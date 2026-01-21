@@ -205,7 +205,7 @@ body.dark-mode {
 }
 
 body.dark-mode .site-header {
-    background-color: #090f3a;
+    background-color:var(--color-darkmodeblue);
 }
 
 body.dark-mode .nav-list li a {
@@ -262,7 +262,73 @@ body.dark-mode h1{
 
 
 
+.dark-mode-btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
 
+}
+
+
+.dark-mode-btn svg{
+  color: var(--color-primary-blue);
+}
+
+body.dark-mode .dark-mode-btn svg{
+  color: white;
+}
+
+.custom-footer {
+    background-color: var(--color-background-cream); 
+    color: var(--color-primary-dark);
+    padding: 15px 20px 5px; 
+    border-top: 1px solid var(--color-primary-blue);
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column { 
+    flex: 1; 
+    min-width: 200px; 
+}
+
+.footer-heading { 
+    color: var(--color-primary-blue); 
+    margin-bottom: 3px; 
+     font-size: 20px;
+}
+
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 10px; 
+    padding-top: 10px; 
+    border-top: 1px solid rgba(22, 30, 84, 0.1); 
+}
+
+/* --- הגדרות Dark Mode --- */
+body.dark-mode .custom-footer {
+    background-color: var(--color-darkmodeblue);
+    color: var(--white);
+    border-top-color: var(--color-primary-blue) !important;
+}
+
+body.dark-mode .footer-heading {
+    color: var(--color-primary-blue);
+}
+
+body.dark-mode .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
 
 
 
@@ -278,6 +344,7 @@ body.dark-mode h1{
 h2 {
   font-size: 8vw !important; /* הפונט תמיד יהיה 8% מרוחב המסך */
 }
+
 }
 
 
@@ -540,71 +607,3 @@ p{
 
 
 
-
-
-.dark-mode-btn{
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-
-}
-
-
-.dark-mode-btn svg{
-  color: var(--color-primary-blue);
-}
-
-body.dark-mode .dark-mode-btn svg{
-  color: white;
-}
-
-.custom-footer {
-    background-color: var(--color-background-cream); 
-    color: var(--color-primary-dark);
-    padding: 15px 20px 5px; 
-    border-top: 1px solid var(--color-primary-blue);
-    margin: 0;
-    font-size: 0.85rem;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.footer-column { 
-    flex: 1; 
-    min-width: 200px; 
-}
-
-.footer-heading { 
-    color: var(--color-primary-blue); 
-    margin-bottom: 3px; 
-}
-
-.footer-bottom { 
-    text-align: center; 
-    margin-top: 10px; 
-    padding-top: 10px; 
-    border-top: 1px solid rgba(22, 30, 84, 0.1); 
-}
-
-/* --- הגדרות Dark Mode --- */
-body.dark-mode .custom-footer {
-    background-color: var(--color-darkmode-blue);
-    color: var(--white);
-    border-top-color: var(--color-primary-blue) !important;
-}
-
-body.dark-mode .footer-heading {
-    color: var(--color-accent-blue);
-}
-
-body.dark-mode .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
-}
