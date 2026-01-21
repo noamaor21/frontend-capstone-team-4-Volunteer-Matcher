@@ -3,49 +3,41 @@ var firstNameInput = document.getElementById("first-name");
 var lastNameInput = document.getElementById("last-name");
 
 registrationForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    var fullName = firstNameInput.value + " " + lastNameInput.value;
-    
-    
-    localStorage.setItem("user_full_name", fullName);
-    alert(fullName + ", נרשמת בהצלחה!");
-    window.location.href = "personal_area.html";
-    var ids = [
-        "check-elderly", "check-food", "check-youth", 
-        "check-lessons", "check-environment", "check-animals", 
-        "check-tech", "check-office", "check-other"
-    ];
+    event.preventDefault(); // מונע מהדף להתרענן
 
-    var names = [
-        "עזרה לקשישים", "חלוקת מזון", "חונכות נוער", 
-        "שיעורים פרטיים", "איכות הסביבה", "סיוע לבעלי חיים", 
-        "תמיכה טכנולוגית", "סיוע משרדי", "אחר"
-    ];
-
-    var selectedInterests = "";
+    // --- שלב א': איסוף נתונים למערך (Array) ---
+    // כאן אנחנו בודקים איזה צ'קבוקסים המשתמש סימן
+    var selectedInterests = [];
+    var ids = ["check-elderly", "check-food", "check-youth", "check-lessons", "check-environment", "check-animals", "check-tech", "check-office", "check-other"];
+    var names = ["עזרה לקשישים", "חלוקת מזון", "חונכות נוער", "שיעורים פרטיים", "איכות הסביבה", "סיוע לבעלי חיים", "תמיכה טכנולוגית", "סיוע משרדי", "אחר"];
 
     for (var i = 0; i < ids.length; i++) {
         var checkbox = document.getElementById(ids[i]);
-        if (checkbox.checked) {
-            selectedInterests = selectedInterests + names[i] + ", ";
+        if (checkbox && checkbox.checked) {
+            selectedInterests.push(names[i]); // מוסיף את השם למערך
         }
     }
- if (selectedInterests.length > 0) {
-    
-    selectedInterests = selectedInterests.substring(0, selectedInterests.length - 2);
-    selectedInterests = selectedInterests + ".";
-}
 
-    
-    localStorage.setItem("user_interests", selectedInterests);
+    // --- שלב ב': יצירת אובייקט ה-State (Object) ---
+    // אנחנו אורזים את כל פרטי המשתמש לחבילה אחת מסודרת
+    var userState = {
+        firstName: firstNameInput.value,
+        lastName: lastNameInput.value,
+        fullName: firstNameInput.value + " " + lastNameInput.value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        address: document.getElementById("address").value,
+        city: document.getElementById("city").value,
+        interests: selectedInterests // כאן נכנס המערך שיצרנו קודם
+    };
 
-var userAddress = document.getElementById("address").value;
-var userCity = document.getElementById("city").value;
+    // --- שלב ג': שמירה בזיכרון (LocalStorage) ---
+    // LocalStorage יודע לשמור רק מילים, אז נהפוך את האובייקט לטקסט בעזרת JSON.stringify
+    localStorage.setItem("user_state", JSON.stringify(userState));
 
-
-localStorage.setItem("user_address", userAddress);
-localStorage.setItem("user_city", userCity);
-
+    // הודעת הצלחה ומעבר דף
+    alert(userState.fullName + ", נרשמת בהצלחה!");
+    window.location.href = "personal_area.html";
 });
 
 var personalLink = document.getElementById("personal-link");
