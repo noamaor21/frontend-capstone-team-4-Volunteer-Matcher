@@ -25,89 +25,93 @@ body {
 
 
 .site-header {
-  background: var(--color-background-cream);
-  position: fixed;
-  left: 0;
-  top:0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px var(--color-primary-blue) solid;
-  padding-left: 0px;
-  padding-right: 0px;
+    background: var(--color-background-cream);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px var(--color-primary-blue) solid;
+    padding-left: 0px;
+    padding-right: 0px;
+    z-index: 9998 !important;
 }
 
 .NameOfProject {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-.logo-img { height: 60px; }
+.logo-img {
+    height: 60px;
+}
 
 .logo {
-  font-size: 20px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  color: var(--color-primary-blue);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--color-primary-blue);
 }
 
 .nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  gap: 18px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 20px;
 }
 
 .nav-list a {
-  text-decoration: none;
-  color: var(--color-primary-blue);
-  font-weight: bold;
+    text-decoration: none;
+    color: var(--color-primary-blue);
+    font-weight: bold;
 }
 
-/* מסתיר רק אייקונים של לינקים (בדסקטופ) */
 .nav-list a i {
-  display: none;
+    display: none;
 }
 
 
-/* ===== HAMBURGER ===== */
 .hamburger {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--color-primary-blue);
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-primary-blue);
 }
 
 
-.dark-mode-btn{
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.dark-mode-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.dark-mode-btn svg{
-  color: var(--color-primary-blue);
+.dark-mode-btn svg {
+    color: var(--color-primary-blue);
 }
 
-/* ===== Dark Mode צבעים לנאב ===== */
 body.dark-mode .site-header {
-  background-color: #090f3a;
+    background-color: #090f3a;
+}
+
+body.dark-mode .logo {
+    color: var(--white);
 }
 
 body.dark-mode .nav-list li a {
-  color: white;
+    color: white;
 }
 
-body.dark-mode .dark-mode-btn svg{
-  color: white;
+body.dark-mode .dark-mode-btn svg {
+    color: white;
 }
 
 
@@ -123,10 +127,10 @@ body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode .section-title,
-body.dark-mode .contact-main-title,
-body.dark-mode .footer-heading {
+body.dark-mode .contact-main-title {
     color: var(--color-accent-blue);
 }
+
 
 body.dark-mode .faq-box {
     background-color: var(--color-primary-blue);
@@ -139,7 +143,7 @@ body.dark-mode .team-info h5 {
 }
 
 body.dark-mode .custom-footer {
-    background-color: var(--color-darkmode-blue);
+    background-color: var(--color-primary-dark);
     border-top-color: var(--color-primary-blue) !important;
     ;
     color: var(--white);
@@ -236,7 +240,7 @@ h3,
 }
 
 .team-member-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
 }
 
 .team-img-wrapper {
@@ -309,11 +313,11 @@ h3,
 }
 
 .primary-button:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.2);
 }
 
 .secondary-button:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.2);
 }
 
 .custom-footer {
@@ -353,7 +357,7 @@ h3,
 
 
 @media (max-width: 480px) {
-   
+
 
     .team-grid {
         grid-template-columns: 1fr;
@@ -364,64 +368,81 @@ h3,
         width: 160px;
         height: 160px;
     }
-.hamburger {
-    display: block;
-    font-size: 2rem;
-  }
 
-  .nav-list {
-    display: none;
-    position: fixed;
-    width: 45%;
-    top:60px;
-    left: 0;
-    height: 100vh;
-    text-align: right;
-    flex-direction: column;
-    padding-top: 5px;
-    padding-right: 5px;
-    z-index: 99;
-    margin-right: auto;
-    font-size: 20px;
-    background-color: var(--color-background-cream);
-    border-top: 1px var(--color-primary-blue) solid;
-    box-sizing: border-box; 
-    margin: 0;
-    padding: 0
-    
-    
-  }
-  
-  .nav-list.showMenu {
-    display: flex !important;
-    padding-top: 5px;
-    padding-right: 5px;
-    
-  }
-  .nav-list a {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+    }
 
-  .nav-list i {
-    display: inline-block !important;
-    margin-left: 14px;
-    font-size: 1.2rem;
-    color: var(--color-primary-blue);
-  }
+    .nav-list {
+        display: none;
+        position: fixed;
+        width: 45%;
+        top: 60px;
+        left: 0;
+        height: 100vh;
+        text-align: right;
+        flex-direction: column;
+        padding-top: 5px;
+        padding-right: 5px;
+        z-index: 99;
+        margin-right: auto;
+        font-size: 20px;
+        background-color: var(--color-background-cream);
+        border-top: 1px var(--color-primary-blue) solid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0
+    }
 
-  body.dark-mode .dark-mode-btn svg{
-    color: var(--color-primary-blue) !important;
-  }
+    .nav-list.showMenu {
+        display: flex !important;
+        padding-top: 5px;
+        padding-right: 5px;
 
-  body.dark-mode .nav-list li a {
-    color: var(--color-primary-blue);
-  }
-  
-  .logo{
-    font-size: 16px !important;
-  }
-  
+    }
+
+    .nav-list a {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .nav-list i {
+        display: inline-block !important;
+        margin-left: 14px;
+        font-size: 1.2rem;
+        color: var(--color-primary-blue);
+    }
+
+    body.dark-mode .dark-mode-btn svg {
+        color: var(--white) !important;
+    }
+
+    body.dark-mode .nav-list li a {
+        color: var(--color-primary-blue);
+    }
+
+    body.dark-mode .nav-list {
+        background-color: var(--color-primary-dark) !important;
+        border-top: 1px solid var(--color-primary-blue);
+    }
+
+    body.dark-mode .nav-list i {
+        color: var(--white) !important;
+    }
+
+    body.dark-mode .nav-list a {
+        color: var(--white) !important;
+    }
+
+    body.dark-mode .hamburger {
+        color: var(--white) !important;
+    }
+
+    .logo {
+        font-size: 16px !important;
+    }
+
 }
 
 
@@ -432,27 +453,23 @@ h3,
         text-align: right;
     }
 
-    .logo{
-    font-size: 2vw ;
-}
+    .logo {
+        font-size: 2vw;
+    }
 
-.nav-list{
-    font-size: 1.2vw;
-   gap:10px !important;
+    .nav-list {
+        font-size: 1.2vw;
+        gap: 10px !important;
 
-}
-.nav-list a {
+    }
+
+    .nav-list a {
         font-size: 13px !important;
-}
+    }
 
-.logo-img{
-    height: 60px;
-}
-
-
-
-   
-
+    .logo-img {
+        height: 60px;
+    }
 
     .stories-wrapper {
         flex-direction: row;
@@ -496,7 +513,7 @@ h3,
 }
 
 @media (min-width: 1024px) {
-    
+
 
     .page-section {
         padding: 60px 20px
@@ -504,6 +521,15 @@ h3,
 
     .section-title {
         font-size: 2.5rem;
+    }
+    .section-subtitle {
+        font-size: 1.5rem !important; 
+        margin-bottom: 30px;         
+        text-align: right;
+
+    }
+    .nav-list a {
+        font-size: 16px !important;
     }
 
     .team-img {
@@ -517,7 +543,7 @@ h3,
 
     .team-img-wrapper {
         width: 200px;
-        height: 200px;
+        height: 2%;
     }
 
 }
