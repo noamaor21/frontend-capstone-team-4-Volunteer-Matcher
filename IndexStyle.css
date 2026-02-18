@@ -282,11 +282,13 @@ body.dark-mode .dark-mode-btn svg{
 .custom-footer {
     background-color: var(--color-background-cream); 
     color: var(--color-primary-dark);
-    padding: 15px 20px 5px; 
+    padding: 0px 20px 5px; 
     border-top: 1px solid var(--color-primary-blue);
     margin: 0;
     font-size: 0.85rem;
+    
 }
+
 
 .footer-container {
     max-width: 1100px;
@@ -305,7 +307,9 @@ body.dark-mode .dark-mode-btn svg{
 .footer-heading { 
     color: var(--color-primary-blue); 
     margin-bottom: 3px; 
-     font-size: 20px;
+    font-weight: normal !important;
+    font-size: 22px;
+    
 }
 
 .footer-bottom { 
@@ -323,7 +327,7 @@ body.dark-mode .custom-footer {
 }
 
 body.dark-mode .footer-heading {
-    color: var(--color-primary-blue);
+    color: var(--color-accent-blue);
 }
 
 body.dark-mode .footer-bottom {
