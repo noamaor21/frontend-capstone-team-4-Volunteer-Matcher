@@ -28,7 +28,7 @@ registrationForm.addEventListener("submit", function(event) {
         phone: document.getElementById("phone").value,
         address: document.getElementById("address").value,
         city: document.getElementById("city").value,
-        interests: selectedInterests // כאן נכנס המערך שיצרנו קודם
+        interests: selectedInterests 
     };
 
     // --- שלב ג': שמירה בזיכרון (LocalStorage) ---
@@ -44,7 +44,7 @@ var personalLink = document.getElementById("personal-link");
 
 personalLink.addEventListener("click", function(event) {
     
-    if (localStorage.getItem("user_full_name") === null) {
+    if (localStorage.getItem("user_state") === null) {
         event.preventDefault(); 
         alert("עליך להירשם קודם כדי להיכנס לאזור האישי!");
         window.location.href = "form.html"; 
