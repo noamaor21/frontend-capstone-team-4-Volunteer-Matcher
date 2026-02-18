@@ -8,38 +8,6 @@ myButton.addEventListener("click", function(){
 });
 
 
-let hamburgerButton = document.getElementById('hamburger');
-let menu = document.getElementById('menu');
-let menuIcon = document.querySelector('.menuIcon');
-let closeIcon = document.querySelector('.closeIcon');
-
-if (hamburgerButton && menu && menuIcon && closeIcon) {
-  hamburgerButton.addEventListener('click', function () {
-    menu.classList.toggle('showMenu');
-
-    if (menu.classList.contains('showMenu')) {
-      menuIcon.style.display = 'none';
-      closeIcon.style.display = 'inline';
-    } else {
-      menuIcon.style.display = 'inline';
-      closeIcon.style.display = 'none';
-    }
-  });
-
-
-  let menuLinks = document.querySelectorAll('.nav-list a');
-  menuLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      menu.classList.remove('showMenu');
-      menuIcon.style.display = 'inline';
-      closeIcon.style.display = 'none';
-    });
-  });
-}
-
-
-
-
 let darkModeToggle = document.getElementById('dark-mode-toggle');
 let iconMoon = document.getElementById('icon-moon');
 let iconSun = document.getElementById('icon-sun');
@@ -74,4 +42,37 @@ if (darkModeToggle) {
 
     updateThemeIcon();
   });
+}
+
+
+
+var personalLink = document.getElementById("personal-link");
+
+personalLink.addEventListener("click", function(event) {
+    
+    if (localStorage.getItem("user_state") === null) {
+        event.preventDefault(); 
+        alert("עליך להירשם קודם כדי להיכנס לאזור האישי!");
+        window.location.href = "form.html"; 
+    }
+});
+
+
+
+function toggleMenu() {
+    const navList = document.querySelector('.nav-list');
+    const menuIcon = document.querySelector('.menuIcon');
+    const closeIcon = document.querySelector('.closeIcon');
+
+   
+    navList.classList.toggle('showMenu');
+
+
+    if (navList.classList.contains('showMenu')) {
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'inline';
+    } else {
+        menuIcon.style.display = 'inline';
+        closeIcon.style.display = 'none';
+    }
 }
