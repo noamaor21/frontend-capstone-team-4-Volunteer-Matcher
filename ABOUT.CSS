@@ -2,7 +2,7 @@
     --color-primary-dark: #161E54;
     --color-primary-blue: #22668D;
     --color-accent-blue: #8ECDDD;
-    --color-background-cream: #FFFFEB;
+    --color-background-cream: #fcfcf2; ;
     --color-accent-orange: #e49708;
     --white: #ffffff;
     --text-gray: #666;
@@ -142,8 +142,11 @@ body.dark-mode .team-info h5 {
 body.dark-mode .custom-footer {
     background-color: var(--color-darkmode-blue);
     border-top-color: var(--color-primary-blue) !important;
-    ;
     color: var(--white);
+}
+
+body.dark-mode .footer-heading {
+    color: var(--color-accent-blue); 
 }
 
 body.dark-mode .team-img-wrapper {
