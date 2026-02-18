@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הרשמה למתנדבים</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css">
+</head>
+<body>
+ <header id="site-header" class="site-header">
+  <div class="NameOfProject" id="Volunteer">
+    <img src="./86bd7fcc-95fa-4aa6-8c51-de3b93994448.png" alt="Volunteer Matcher Logo" class="logo-img">
+    <h1 class="logo"><strong>Volunteer Matcher</strong></h1>
+  </div>
+
+  <div class="side-nav">
+    <button class="hamburger" id="hamburger" aria-label="פתח תפריט">
+      <span class="menuIcon">☰</span>
+      <span class="closeIcon" style="display: none;">✖</span>
+    </button>
+
+    <nav id="primary-nav" class="nav">
+      <ul class="nav-list" id="menu">
+        <li><a href="./index.html"><i class="fi fi-rr-home"></i> דף הבית</a></li>
+        <li><a href="./personal_area.html" id= "personal-link"><i  class="fi fi-rr-user"></i> איזור אישי</a></li>
+        <li><a href="./about.html"><i class="fi fi-rr-interrogation"></i> עלינו</a></li>
+        <li><a href="./organizations.html"><i class="fi fi-br-search"></i> מאגר עמותות</a></li>
+        <li><a href="./form.html"><i class="fi fi-rs-form"></i> הרשמה</a></li>
+        <li><a href="./yad-lakashis.html"><i class="fi fi-rr-book-alt"></i> עמותת ״יד לקשיש״</a></li>
+
+        <!-- Dark Mode -->
+        <li class="nav-dark-mode always-show">
+          <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Dark mode toggle">
+            <!-- מצב בהיר: ירח -->
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                 class="bi bi-moon" viewBox="0 0 16 16">
+              <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+            </svg>
+
+            <!-- מצב כהה: שמש -->
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                 class="bi bi-brightness-high" viewBox="0 0 16 16" style="display:none;">
+              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="main-wrapper">
+        <main class="form-card shadow">
+            <h2 class="title">טופס הרשמה Volunteer Matcher</h2>
+    
+            <form class="row g-3" method="POST" action="#">
+                <div class="col-md-6">
+                    <label for="first-name" class="form-label">שם פרטי</label>
+                    <label  class="form-request"> *</label>
+                    <input type="text" id="first-name" name="first_name" class="form-control" placeholder="ישראל" required aria-required="true">
+                </div>
+                <div class="col-md-6">
+                    <label for="last-name" class="form-label">שם משפחה </label>
+                    <label  class="form-request"> *</label>
+                    <input type="text" id="last-name" name="last_name" class="form-control" placeholder="ישראלי" required aria-required="true">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="email" class="form-label">כתובת מייל </label>
+                    <label  class="form-request"> *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required aria-required="true">
+                </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">סיסמה </label>
+                    <label  class="form-request"> *</label>
+                    <input type="password" id="password" name="password" class="form-control"placeholder="8 תווים ומעלה" pattern=".{8,}" 
+                    title="הסיסמה חייבת להכיל לפחות 8 תווים" required aria-required="true">
+                </div>
+
+                <div class="col-md-6">
+                 <label for="phone" class="form-label">מספר פלאפון</label>
+                <label class="form-request"> *</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="0501234567" pattern="05[0-9]{8}" required aria-required="true">
+                </div>
+
+                <fieldset class="col-12 py-2">
+                    <legend class="form-label d-block" style="font-size: 0.9rem;">מין </legend>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">זכר</label>
+                        </div>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">נקבה</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                            <label class="form-check-label" for="other">אחר</label>
+                        </div>
+                </fieldset>
+                
+
+                <div class="col-12">
+                    <label for="address" class="form-label">כתובת מגורים</label>
+                    <input type="text" id="address" name="address" class="form-control">
+                </div>
+                <div class="col-md-8">
+                    <label for="city" class="form-label">עיר</label>
+                    <input type="text" id="city" name="city" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="zipcode" class="form-label">מיקוד</label>
+                    <input type="text" id="zipcode" name="zipcode" class="form-control">
+                </div>
+            
+                 
+                <table class="Volunteer-type-table" aria-label="בחירת תחומי התנדבות">
+    <thead>
+        <tr>
+            <th colspan="3">
+                <legend class="form-label d-block fw-bold">באיזו פעילות תרצה/י להתנדב?</legend>
+            </th>   
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-elderly" value="elderly">
+                    <label class="form-check-label" for="check-elderly">עזרה לקשישים</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-food" value="food">
+                    <label class="form-check-label" for="check-food">חלוקת מזון</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-youth" value="youth">
+                    <label class="form-check-label" for="check-youth">חונכות נוער</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-lessons" value="lessons">
+                    <label class="form-check-label" for="check-lessons">שיעורים פרטיים</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-environment" value="environment">
+                    <label class="form-check-label" for="check-environment">איכות הסביבה</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-animals" value="animals">
+                    <label class="form-check-label" for="check-animals">סיוע לבעלי חיים</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-tech" value="tech">
+                    <label class="form-check-label" for="check-tech">תמיכה טכנולוגית</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-office" value="office">
+                    <label class="form-check-label" for="check-office">סיוע משרדי</label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="activities[]" id="check-other" value="other">
+                    <label class="form-check-label" for="check-other">אחר</label>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+                
+      <fieldset class="col-12 py-3">
+    <legend class="form-label d-block fw-bold" style="font-size: 0.9rem;">זמינות</legend>
+    <div class="row g-2 justify-content-start" aria-label="ימי זמינות בשבוע">
+        
+        <div class="col-4 col-md">
+            <input type="checkbox" class="btn-check" id="day-sun" autocomplete="off">
+            <label class="btn btn-outline-primary w-100" for="day-sun">ראשון</label>
+        </div>
+
+        <div class="col-4 col-md">
+            <input type="checkbox" class="btn-check" id="day-mon" autocomplete="off">
+            <label class="btn btn-outline-primary w-100" for="day-mon">שני</label>
+        </div>
+
+        <div class="col-4 col-md">
+            <input type="checkbox" class="btn-check" id="day-tue" autocomplete="off">
+            <label class="btn btn-outline-primary w-100" for="day-tue">שלישי</label>
+        </div>
+
+        <div class="col-4 col-md">
+            <input type="checkbox" class="btn-check" id="day-wed" autocomplete="off">
+            <label class="btn btn-outline-primary w-100" for="day-wed">רביעי</label>
+        </div>
+
+        <div class="col-4 col-md">
+            <input type="checkbox" class="btn-check" id="day-thu" autocomplete="off">
+            <label class="btn btn-outline-primary w-100" for="day-thu">חמישי</label>
+        </div>
+
+        <div class="col-4 col-md">
+            <input type="checkbox" class="btn-check" id="day-fri" autocomplete="off">
+            <label class="btn btn-outline-primary w-100" for="day-fri">שישי</label>
+        </div>
+
+        <div class="col-4 col-md">
+            <input type="checkbox" class="btn-check" id="day-sat" autocomplete="off">
+            <label class="btn btn-outline-primary w-100" for="day-sat">שבת</label>
+        </div>
+        
+    </div>
+</fieldset>
+                
+
+                <div class="col-12 mt-4 text-center">
+                    <button type="submit" class="submit-btn">הירשם עכשיו</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+    <div class="footer-container">
+        <div class="footer-column about">
+            <h4 class="footer-heading">Volunteer Matcher</h4>
+            <p>הפלטפורמה המובילה לחיבור בין מתנדבים לעמותות, במטרה ליצור שינוי בחברה.</p>
+        </div>
+        <div class="footer-column contact">
+            <h4 class="footer-heading">צרו קשר</h4>
+            <div class="contact-item">📍 הרצל 100, תל אביב</div>
+            <div class="contact-item">📧 info@volunteermatcher.co.il</div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Volunteer Matcher | כל הזכויות שמורות למרכז האקדמי רופין </p>
+    </div>
+</footer>
+    <script src="form.js"></script>
+</body>
+</html>
