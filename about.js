@@ -63,12 +63,31 @@ if (darkModeToggle) {
 
 var personalLink = document.getElementById("personal-link");
 
-personalLink.addEventListener("click", function(event) {
-    
-    if (localStorage.getItem("user_full_name") === null) {
-        event.preventDefault(); 
+personalLink.addEventListener("click", function (event) {
+
+    if (localStorage.getItem("user_state") === null) {
+        event.preventDefault();
         alert("עליך להירשם קודם כדי להיכנס לאזור האישי!");
-        window.location.href = "form.html"; 
+        window.location.href = "form.html";
     }
 });
 
+// בחירת כפתור הוואטסאפ - הכחול (Secondary)
+const whatsappButtons = document.querySelectorAll('.secondary-button');
+
+// בחירת כפתור השיחה - הכתום (Primary)
+const phoneButtons = document.querySelectorAll('.primary-button');
+
+// הגדרת פעולה לכפתורי וואטסאפ (הכחולים) - שליחה ישירה
+whatsappButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        window.open('https://wa.me/972533340373', '_blank');
+    });
+});
+
+// הגדרת פעולה לכפתורי שיחה (הכתומים) - קפיצת התראה
+phoneButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert("לשיחה טלפונית עם נציג ניתן לחייג למספר - 0533340373");
+    });
+});
