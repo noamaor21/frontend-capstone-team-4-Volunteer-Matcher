@@ -72,20 +72,20 @@ personalLink.addEventListener("click", function (event) {
     }
 });
 
-// בחירת כפתור הוואטסאפ - הכחול (Secondary)
+// כפתור הוואטסאפ (Secondary)
 const whatsappButtons = document.querySelectorAll('.secondary-button');
 
-// בחירת כפתור השיחה - הכתום (Primary)
+// כפתור השיחה  (Primary)
 const phoneButtons = document.querySelectorAll('.primary-button');
 
-// הגדרת פעולה לכפתורי וואטסאפ (הכחולים) - שליחה ישירה
+// וואטסאפ שליחה ישירה
 whatsappButtons.forEach(button => {
     button.addEventListener('click', () => {
         window.open('https://wa.me/972533340373', '_blank');
     });
 });
 
-// הגדרת פעולה לכפתורי שיחה (הכתומים) - קפיצת התראה
+// קפיצת התראה
 phoneButtons.forEach(button => {
     button.addEventListener('click', () => {
         alert("לשיחה טלפונית עם נציג ניתן לחייג למספר - 0533340373");
