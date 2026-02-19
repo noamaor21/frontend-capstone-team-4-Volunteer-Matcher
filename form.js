@@ -30,7 +30,7 @@ registrationForm.addEventListener("submit", function(event) {
 
     localStorage.setItem("user_state", JSON.stringify(userState));
 
-  ף
+  
     alert(userState.fullName + ", נרשמת בהצלחה!");
     window.location.href = "personal_area.html";
 });
