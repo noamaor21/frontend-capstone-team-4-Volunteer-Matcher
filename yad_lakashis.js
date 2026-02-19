@@ -15,8 +15,8 @@ for (var i = 0; i < buttons.length; i++) {
         else {
             localStorage.setItem("chosen_org", organization);
 
-            alert(userName + ", נרשמת בהצלחה ל" + organization);
-            window.location.href = "personal_area.html";
+              const user = JSON.parse(userName);
+              alert("ברוך הבא, " + user.fullName + "! מעבירים אותך לאזור האישי.");
         }
     }
     );
