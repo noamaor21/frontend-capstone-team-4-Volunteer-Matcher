@@ -450,6 +450,7 @@ p{
     .hamburger {
         display: block;
         font-size: 2rem;
+        
     }
 
     .nav-list {
@@ -465,6 +466,8 @@ p{
         font-size: 20px;
         background-color: var(--color-background-cream);
         border-top:1px var(--color-primary-blue) solid;
+        right:0 !important;
+
         
     }
     
@@ -510,6 +513,7 @@ p{
     .btn-secondary {
         width: 100%;
         font-size: 15px;
+       border: 2px solid black !important;
     }
 
     .about-div {
