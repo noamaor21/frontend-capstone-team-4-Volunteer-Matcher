@@ -3,10 +3,8 @@ var firstNameInput = document.getElementById("first-name");
 var lastNameInput = document.getElementById("last-name");
 
 registrationForm.addEventListener("submit", function(event) {
-    event.preventDefault(); // מונע מהדף להתרענן
+    event.preventDefault();
 
-    // --- שלב א': איסוף נתונים למערך (Array) ---
-    // כאן אנחנו בודקים איזה צ'קבוקסים המשתמש סימן
     var selectedInterests = [];
     var ids = ["check-elderly", "check-food", "check-youth", "check-lessons", "check-environment", "check-animals", "check-tech", "check-office", "check-other"];
     var names = ["עזרה לקשישים", "חלוקת מזון", "חונכות נוער", "שיעורים פרטיים", "איכות הסביבה", "סיוע לבעלי חיים", "תמיכה טכנולוגית", "סיוע משרדי", "אחר"];
@@ -14,12 +12,11 @@ registrationForm.addEventListener("submit", function(event) {
     for (var i = 0; i < ids.length; i++) {
         var checkbox = document.getElementById(ids[i]);
         if (checkbox && checkbox.checked) {
-            selectedInterests.push(names[i]); // מוסיף את השם למערך
+            selectedInterests.push(names[i]);
         }
     }
 
-    // --- שלב ב': יצירת אובייקט ה-State (Object) ---
-    // אנחנו אורזים את כל פרטי המשתמש לחבילה אחת מסודרת
+    
     var userState = {
         firstName: firstNameInput.value,
         lastName: lastNameInput.value,
@@ -31,11 +28,9 @@ registrationForm.addEventListener("submit", function(event) {
         interests: selectedInterests 
     };
 
-    // --- שלב ג': שמירה בזיכרון (LocalStorage) ---
-    // LocalStorage יודע לשמור רק מילים, אז נהפוך את האובייקט לטקסט בעזרת JSON.stringify
     localStorage.setItem("user_state", JSON.stringify(userState));
 
-    // הודעת הצלחה ומעבר דף
+  ף
     alert(userState.fullName + ", נרשמת בהצלחה!");
     window.location.href = "personal_area.html";
 });
@@ -69,7 +64,6 @@ if (hamburgerButton && menu && menuIcon && closeIcon) {
     }
   });
 
-  // סגירת תפריט בלחיצה על לינק
   let menuLinks = document.querySelectorAll('.nav-list a');
   menuLinks.forEach(function (link) {
     link.addEventListener('click', function () {
@@ -80,9 +74,7 @@ if (hamburgerButton && menu && menuIcon && closeIcon) {
   });
 }
 
-/* =========================
-   Dark Mode (עם החלפת אייקון)
-========================= */
+
 let darkModeToggle = document.getElementById('dark-mode-toggle');
 let iconMoon = document.getElementById('icon-moon');
 let iconSun = document.getElementById('icon-sun');
@@ -99,7 +91,6 @@ function updateThemeIcon() {
   }
 }
 
-// טעינה ראשונית
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark-mode');
 }
