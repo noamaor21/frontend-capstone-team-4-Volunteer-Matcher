@@ -58,7 +58,6 @@ body {
   font-weight: bold;
 }
 
-/* מסתיר רק אייקונים של לינקים (בדסקטופ) */
 .nav-list a i {
   display: none;
 }
@@ -158,7 +157,6 @@ h4{
     margin-bottom: 0px;
 }
 
-/* ===== DARK MODE  ===== */
 
 body.dark-mode {
     background: #090f3a !important; 
@@ -261,7 +259,6 @@ body.dark-mode .dark-mode-btn svg{
     border-top: 1px solid rgba(22, 30, 84, 0.1); 
 }
 
-/* --- הגדרות Dark Mode --- */
 body.dark-mode .custom-footer {
     background-color: var(--color-darkmode-blue);
     color: white !important; 
