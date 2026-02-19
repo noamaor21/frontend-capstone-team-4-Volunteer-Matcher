@@ -17,6 +17,7 @@ for (var i = 0; i < buttons.length; i++) {
 
               const user = JSON.parse(userName);
               alert("ברוך הבא, " + user.fullName + "! מעבירים אותך לאזור האישי.");
+              window.location.href= "personal_area.html";
         }
     }
     );
