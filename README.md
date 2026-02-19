@@ -3,8 +3,8 @@
 פלטפורמה דינמית ורספונסיבית שנועדה לגשר על הפער בין מתנדבים לארגונים חברתיים. הפרויקט פותח במסגרת קורס פיתוח Frontend במרכז האקדמי רופין.
 
 #  [לחצו על הקישור לצפייה באתר החי]
-(https://www.google.com/search?q=https://noamaor21.github.io/frontend-capstone-team-4-Volunteer-Matcher/)
 
+https://noamaor21.github.io/frontend-capstone-team-4-Volunteer-Matcher/
 # תיאור המערכת
 
 האתר בנוי ממספר דפים המעניקים חווית משתמש מלאה מקצה לקצה:
