@@ -1,20 +1,14 @@
-// --- שלב א': שליפת האובייקט מהזיכרון ---
-var rawData = localStorage.getItem("user_state"); // מקבלים את הטקסט
-var user = JSON.parse(rawData); // הופכים את הטקסט חזרה לאובייקט JS חי
+var rawData = localStorage.getItem("user_state"); 
+var user = JSON.parse(rawData); 
 
-// בדיקה אם המשתמש קיים בזיכרון
 if (user) {
-    // --- שלב ב': עדכון ה-HTML בעזרת האובייקט ---
     
-    // הצגת השם המלא
     var nameDisplay = document.getElementById("user-name");
     nameDisplay.innerHTML = user.fullName;
 
-    // הצגת תחומי עניין (חיבור המערך למחרוזת אחת עם פסיקים)
     var interestsDisplay = document.getElementById("user-interests");
     interestsDisplay.innerHTML = "תחומי עניין: " + user.interests.join(", ");
 
-    // הצגת מיקום (בדיקה אם יש עיר וכתובת)
     var locationDisplay = document.getElementById("user-location");
     if (user.address && user.city) {
         locationDisplay.innerHTML = user.address + ", " + user.city;
@@ -68,7 +62,6 @@ if (hamburgerButton && menu && menuIcon && closeIcon) {
     }
   });
 
-  // סגירת תפריט בלחיצה על לינק
   let menuLinks = document.querySelectorAll('.nav-list a');
   menuLinks.forEach(function (link) {
     link.addEventListener('click', function () {
@@ -79,9 +72,7 @@ if (hamburgerButton && menu && menuIcon && closeIcon) {
   });
 }
 
-/* =========================
-   Dark Mode (עם החלפת אייקון)
-========================= */
+
 let darkModeToggle = document.getElementById('dark-mode-toggle');
 let iconMoon = document.getElementById('icon-moon');
 let iconSun = document.getElementById('icon-sun');
@@ -98,7 +89,6 @@ function updateThemeIcon() {
   }
 }
 
-// טעינה ראשונית
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark-mode');
 }
