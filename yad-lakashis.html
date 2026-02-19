@@ -6,14 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>יד לקשיש - הזדמנויות התנדבות</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylegili.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Heebo:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css">
+
+    <link rel="stylesheet" href="stylegili.css">
+
+
 </head>
 
 <body>
+
+    <header id="site-header" class="site-header">
+        <div class="NameOfProject" id="Volunteer">
+            <img src="./logo2.png" alt="Volunteer Matcher Logo" class="logo-img">
+            <h1 class="logo">Volunteer Matcher</h1>
+        </div>
+
+        <div class="side-nav">
+            <button class="hamburger" id="hamburger" aria-label="פתח תפריט" onclick="toggleMenu()">
+                <span class="menuIcon">☰</span>
+                <span class="closeIcon" style="display: none;">✖</span>
+            </button>
+
+
+            <nav id="primary-nav" class="nav">
+                <ul class="nav-list" id="menu">
+                    <li><a href="./index.html"><i class="fi fi-rr-home"></i> דף הבית</a></li>
+                    <li><a href="./personal_area.html" id="personal-link"><i class="fi fi-rr-user"></i> איזור אישי</a>
+                    </li>
+                    <li><a href="./about.html"><i class="fi fi-rr-interrogation"></i> עלינו</a></li>
+                    <li><a href="./organizations.html"><i class="fi fi-br-search"></i> מאגר עמותות</a></li>
+                    <li><a href="./form.html"><i class="fi fi-rs-form"></i> הרשמה</a></li>
+                    <li><a href="./yad-lakashis.html"><i class="fi fi-rr-book-alt"></i> עמותת ״יד לקשיש״</a></li>
+
+
+                    <li class="nav-dark-mode always-show">
+                        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Dark mode toggle">
+                            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 
+                                    7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 
+                                    1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266
+                                     2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 
+                                     1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-
+                                     .506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                            </svg>
+
+
+                            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16"
+                                style="display:none;">
+                                <path
+                                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
 
 
     <div class="image-window">
@@ -72,7 +135,9 @@
             <div class="volunteer-card-side"> </div>
             <div class="volunteer-card-content">
                 <h2>הנכד הדיגיטלי</h2>
-                <p>הנגשת העולם הטכנולוגי, לימוד סבלני של שימוש בסמארטפון ויישומים חיוניים לקשישים. תפקיד זה משפיע על הפגת הבדידות – הקשישים מקבלים עצמאות ויכולת לתקשר עם הנכדים בשיחת וידאו, והמתנדבים זוכים ללמוד סבלנות וליצור גשר בין-דורי משמעותי.</p>
+                <p>הנגשת העולם הטכנולוגי, לימוד סבלני של שימוש בסמארטפון ויישומים חיוניים לקשישים. תפקיד זה משפיע על
+                    הפגת הבדידות – הקשישים מקבלים עצמאות ויכולת לתקשר עם הנכדים בשיחת וידאו, והמתנדבים זוכים ללמוד
+                    סבלנות וליצור גשר בין-דורי משמעותי.</p>
                 <ul>
                     <li><strong>מיקום:</strong> מרכז הקהילה (רחוב הרצל 35)</li>
                     <li><strong>ימים ושעות:</strong> שלישי וחמישי, 16:00-17:30</li>
@@ -127,15 +192,18 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_534/https://moryagroup.co.il/wp-content/uploads/2022/01/shutterstock_367740026-1024x683.jpg" class="d-block w-100" alt="activity 1 in Nursing home">
+                    <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_534/https://moryagroup.co.il/wp-content/uploads/2022/01/shutterstock_367740026-1024x683.jpg"
+                        class="d-block w-100" alt="activity 1 in Nursing home">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://nathan.co.il/wp-content/uploads/2015/04/Dollarphotoclub_49249610-scaled-1-1024x683.jpg" class="d-block w-100" alt="activity 2 in Nursing home">
+                    <img src="https://nathan.co.il/wp-content/uploads/2015/04/Dollarphotoclub_49249610-scaled-1-1024x683.jpg"
+                        class="d-block w-100" alt="activity 2 in Nursing home">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://static.wixstatic.com/media/51295d_23ab95deeea44bac9389bd1e9b44157e~mv2.jpg/v1/fit/w_750,h_500,al_c,q_20,enc_auto/file.jpg" class="d-block w-100" alt="activity 3 in Nursing home">
+                    <img src="https://static.wixstatic.com/media/51295d_23ab95deeea44bac9389bd1e9b44157e~mv2.jpg/v1/fit/w_750,h_500,al_c,q_20,enc_auto/file.jpg"
+                        class="d-block w-100" alt="activity 3 in Nursing home">
                 </div>
 
             </div>
@@ -152,7 +220,29 @@
 
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    <footer class="custom-footer">
+        <div class="footer-container">
+            <div class="footer-column about">
+                <h4 class="footer-heading">Volunteer Matcher</h4>
+                <p>הפלטפורמה המובילה לחיבור בין מתנדבים לעמותות, במטרה ליצור שינוי בחברה.</p>
+            </div>
+            <div class="footer-column contact">
+                <h4 class="footer-heading">צרו קשר</h4>
+                <div class="contact-item">📍 הרצל 100, תל אביב</div>
+                <div class="contact-item">📧 info@volunteermatcher.co.il</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Volunteer Matcher | כל הזכויות שמורות למרכז האקדמי רופין </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="yad_lakashis.js"></script>
 </body>
 
