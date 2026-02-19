@@ -450,6 +450,7 @@ p{
     .hamburger {
         display: block;
         font-size: 2rem;
+        margin-right: auto !important;
         
     }
 
@@ -466,7 +467,7 @@ p{
         font-size: 20px;
         background-color: var(--color-background-cream);
         border-top:1px var(--color-primary-blue) solid;
-        right:0 !important;
+        
 
         
     }
