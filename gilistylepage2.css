@@ -501,6 +501,7 @@ body.dark-mode .footer-bottom {
         display: none;         
         position: fixed;     
         top: 55px; 
+        bottom: 0;
         left: 0 !important;           
         right: auto !important;     
         width: 60%  !important; 
